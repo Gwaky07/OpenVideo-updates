@@ -1,0 +1,15 @@
+{
+    "schema_version":  1,
+    "scope":  "frontend",
+    "commit":  "5e1fea99e3ceaff4e02575940b9a34daa2b7f281",
+    "version":  "5e1fea99e3ce",
+    "summary":  "frontend update",
+    "notes":  [
+                  "sidebar update without login"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/frontend.zip",
+                    "sha256":  "46730c2481878f302e830efb8499cbe6e9ec8170448ad3fb40bd2bc1c7468b8e",
+                    "bytes":  509199
+                }
+}
