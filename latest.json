@@ -1,7 +1,7 @@
 {
     "schema_version":  1,
     "scope":  "frontend",
-    "commit":  "1508840abdd00726ac690e21392e2a1a51e23d9c",
+    "commit":  "316f5718fe24e116395fcff07dc5ca660d3bf0fa",
     "version":  "v0.1.4",
     "summary":  "工作台页面有更新",
     "notes":  [
@@ -10,7 +10,7 @@
               ],
     "package":  {
                     "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/frontend.zip",
-                    "sha256":  "414a890116f1b8d0a724cd0c706f6051f6ef56ee3182e2462bb5266e518d408f",
-                    "bytes":  652758
+                    "sha256":  "529d4193ce6cd012fe7d6619fb0a41919ddefce5de96e821af55581e721ffffc",
+                    "bytes":  652575
                 }
 }
