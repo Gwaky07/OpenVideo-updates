@@ -1,16 +1,17 @@
-{
+﻿{
     "schema_version":  1,
-    "scope":  "frontend",
+    "scope":  "full",
     "commit":  "c6d64c7c249550a01f44cfa22bb263fbd8a0fc96",
-    "version":  "v0.1.4",
-    "summary":  "工作台页面有更新",
+    "version":  "v0.2.0",
+    "summary":  "Full product update",
     "notes":  [
-                  "不用登录也能检查更新",
-                  "点下载后只换页面，项目和素材都还在"
+                  "Updated the packaged application",
+                  "Projects and local settings are preserved"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/frontend.zip",
-                    "sha256":  "72dfa6db66853f3e09ce6861c0a05586eaab657ceaebb943f417a59a90a7f50a",
-                    "bytes":  652840
-                }
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.2.0-windows.zip",
+                    "sha256":  "e28c8f1d4fda0dc81b5fd9d42b77bacb4cbe1184d15322511cc811cb7d6a4a59",
+                    "bytes":  18097460
+                },
+    "publishedAt":  "2026-09-13T04:56:25.1788002+00:00"
 }
