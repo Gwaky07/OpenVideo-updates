@@ -1,17 +1,17 @@
-﻿{
+{
     "schema_version":  1,
-    "scope":  "full",
-    "commit":  "a1860b4fffe53a3c4dcec0b660df6510e8e17f8e",
-    "version":  "v0.2.7",
-    "summary":  "整产品更新（含 Gateway + 启动器）",
+    "scope":  "frontend",
+    "commit":  "836909937f3772152d4130358e7d39e69b12c2f3",
+    "headCommit":  "836909937f3772152d4130358e7d39e69b12c2f3",
+    "version":  "v0.2.6",
+    "summary":  "工作台页面有更新",
     "notes":  [
-                  "Page, Gateway and launcher upgrade together",
-                  "Failed apply rolls back to the previous release"
+                  "不用登录也能检查更新",
+                  "点下载后只换页面，项目和素材都还在"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.2.7-windows.zip",
-                    "sha256":  "43ea57df05ff9c19c2f70a96f2a240f547a899c321055c24c8e890fbb64beacd",
-                    "bytes":  4539043
-                },
-    "publishedAt":  "2026-09-13T10:32:20.5518668+00:00"
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/frontend.zip",
+                    "sha256":  "4047044327f6454aaa74913144edf2a2c576188178cfc1433c457170ad046b0d",
+                    "bytes":  653575
+                }
 }
