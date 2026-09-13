@@ -1,7 +1,7 @@
 ﻿{
     "schema_version":  1,
     "scope":  "full",
-    "commit":  "2e8dd84fd58883f3c3d6e08a0ab5cc4dc6d62767",
+    "commit":  "3d6e5a885830a3dcfdd97d19a53f551a6acf812c",
     "version":  "v0.2.6",
     "summary":  "整产品更新（含 Gateway + 启动器）",
     "notes":  [
@@ -10,8 +10,8 @@
               ],
     "package":  {
                     "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.2.6-windows.zip",
-                    "sha256":  "3cc38edbcddde133d6659bc03e62f9aac4ad65c64a5471a9fb882546267a1fd5",
-                    "bytes":  4538762
+                    "sha256":  "b299191000737c1d8051b7bf2c35b5da27f27161790ad26093deefcd335da5b0",
+                    "bytes":  4538765
                 },
-    "publishedAt":  "2026-09-13T09:32:08.5521381+00:00"
+    "publishedAt":  "2026-09-13T09:37:57.1550517+00:00"
 }
