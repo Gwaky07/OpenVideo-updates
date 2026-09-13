@@ -24,7 +24,29 @@ Without model, Jianying, and materials, the page can open, but the creation chai
 
 Later, just double-click `OpenVideo.cmd` again. For a desktop icon, run `Create-OpenVideoShortcut.cmd` once.
 
-The sidebar Update button currently replaces the web UI only, not Gateway or the launcher. After a private `main` push, run `scripts\Ship-OpenVideoColleagueUpdate.ps1` on this PC. Do not wait for GitHub Actions and do not pay to unblock them. Gateway / launcher / Jianying changes still need a new full ZIP. Colleagues need v0.1.4+ first.
+## Updates
+
+The current `v0.3.5` channel supports whole-product updates. The sidebar can
+replace the packaged Web UI, Gateway, launcher and `OpenVideo.cmd` together.
+Projects, materials, model settings, Jianying identity and the private Catalog
+stay in the user's local data directory.
+
+After changing code in the private source repository, push `main` and run the
+publisher on the developer machine:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\Publish-OpenVideoFullUpdateQuiet.ps1 -Version v0.3.5
+```
+
+The publisher builds the current Web app, rebuilds the portable launcher,
+scans the ZIP, writes its SHA-256 manifest and pushes only the ZIP, `latest.json`
+and this guide to the public `OpenVideo-updates` feed. Users do not log in to
+GitHub. They open their local workbench, click the sidebar update button and
+let it restart. A failed health check restores the previous program version.
+
+Give a new user the complete `OpenVideo-v0.3.5-windows.zip` first. Unzip it
+fully and start `OpenVideo.cmd` once before using the update button. Do not run
+the button from a source checkout containing `.git`.
 
 ## Do not
 
