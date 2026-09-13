@@ -1,17 +1,17 @@
-{
+﻿{
     "schema_version":  1,
-    "scope":  "frontend",
-    "commit":  "836909937f3772152d4130358e7d39e69b12c2f3",
-    "headCommit":  "836909937f3772152d4130358e7d39e69b12c2f3",
-    "version":  "v0.2.6",
-    "summary":  "工作台页面有更新",
+    "scope":  "full",
+    "commit":  "adbc13d9926b48a87f51ffeb9fbd6ee18b3a6fba",
+    "version":  "v0.3.5",
+    "summary":  "OpenVideo whole-product update",
     "notes":  [
-                  "不用登录也能检查更新",
-                  "点下载后只换页面，项目和素材都还在"
+                  "Page, Gateway and launcher upgrade together",
+                  "Failed apply rolls back to the previous release"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/frontend.zip",
-                    "sha256":  "4047044327f6454aaa74913144edf2a2c576188178cfc1433c457170ad046b0d",
-                    "bytes":  653575
-                }
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.5-windows.zip",
+                    "sha256":  "80914d5b8baba1f77a5fc20649b64a0b2f40474e2790a9e80abbb8e8cebac276",
+                    "bytes":  18076728
+                },
+    "publishedAt":  "2026-09-13T16:41:17.3899815+00:00"
 }
