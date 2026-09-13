@@ -1,17 +1,17 @@
-﻿{
+{
     "schema_version":  1,
     "scope":  "full",
-    "commit":  "0c690d74188b52e3aad81e7dafbcf14c4ab2b6df",
+    "commit":  "eb5abe99b7569852a392828ae0c1e2ca418d84c0",
     "version":  "v0.3.5",
-    "summary":  "OpenVideo whole-product update",
+    "summary":  "OpenVideo 全部能力更新",
     "notes":  [
                   "Page, Gateway and launcher upgrade together",
                   "Failed apply rolls back to the previous release"
               ],
     "package":  {
                     "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.5-windows.zip",
-                    "sha256":  "9e8abebdc1e03e64abf948ca7058c39e8df9196d34a408078d8642d30b738c72",
-                    "bytes":  18077506
+                    "sha256":  "e4105642f89f0aff1c909e99352d1a6cef17bada8501d79f0259499fdcb73d2b",
+                    "bytes":  18077913
                 },
-    "publishedAt":  "2026-09-13T16:53:43.9686899+00:00"
+    "publishedAt":  "2026-09-13T17:08:40.3318899+00:00"
 }
