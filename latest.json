@@ -1,7 +1,7 @@
 {
     "schema_version":  1,
     "scope":  "full",
-    "commit":  "483fe0499aa1260bd011e239d7258b1fdfb5ddf9",
+    "commit":  "82c22c5a5bebc9781c0f7a865918b87184274077",
     "version":  "v0.3.11",
     "summary":  "OpenVideo v0.3.11 full product update",
     "notes":  [
@@ -11,8 +11,8 @@
               ],
     "package":  {
                     "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.11-windows.zip",
-                    "sha256":  "112bd9110c6cb24616f41fbafdf08064dc7de508697e1c8e73a95eff9271db7e",
-                    "bytes":  20049796
+                    "sha256":  "ab57ff81662049e14061efd9bba6211a4d5cc618e8f49a28a94a32f875872cca",
+                    "bytes":  20067737
                 },
-    "publishedAt":  "2026-09-14T04:54:02.6897565+00:00"
+    "publishedAt":  "2026-09-14T06:43:12.7748768+00:00"
 }
