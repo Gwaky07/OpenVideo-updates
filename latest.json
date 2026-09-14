@@ -1,18 +1,18 @@
 {
     "schema_version":  1,
     "scope":  "full",
-    "commit":  "bb66b5c93d06123db38a5b875f89109d60562656",
-    "version":  "v0.3.11",
-    "summary":  "OpenVideo v0.3.11 full product update",
+    "commit":  "8419f302274d16bb6a5685ba5062c02c56a15ab6",
+    "version":  "v0.3.12",
+    "summary":  "OpenVideo v0.3.12 full product update",
     "notes":  [
                   "Whole product update: page + Gateway source + scripts + config + OpenVideo.cmd + docs",
                   "Run scripts/Install-OpenVideoOnColleagueMachine.ps1 to verify, swap, and bootstrap a colleague machine",
                   "Projects and local settings are preserved; failed install rolls back to the previous release"
               ],
     "package":  {
-                    "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.11-windows.zip",
-                    "sha256":  "b9939bf04d6ee3019ab4730a5070fcbaa5a2af9b34ba7697414e5e083295ce89",
-                    "bytes":  94733642
+                    "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.12-windows.zip",
+                    "sha256":  "ea64a422e5ce52cdaa738673b6380ed6c6a1100ff9665ea206133601b8a946d9",
+                    "bytes":  94737437
                 },
-    "publishedAt":  "2026-09-14T15:37:01.1022591+00:00"
+    "publishedAt":  "2026-09-14T16:25:25.2085272+00:00"
 }
