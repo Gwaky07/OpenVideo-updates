@@ -1,13 +1,25 @@
-{
+﻿{
     "schema_version":  1,
     "scope":  "full",
     "commit":  "cec31f8e2401d9af3404886139a9f9934a409ccf",
     "version":  "v0.3.13",
-    "summary":  "OpenVideo v0.3.13 full product update",
+    "summary":  "OpenVideo v0.3.13 整产品更新",
     "notes":  [
-                  "Whole product update: page + Gateway source + scripts + config + OpenVideo.cmd + docs",
-                  "Run scripts/Install-OpenVideoOnColleagueMachine.ps1 to verify, swap, and bootstrap a colleague machine",
-                  "Projects and local settings are preserved; failed install rolls back to the previous release"
+                  {
+                      "title":  "更新说明现在写人话",
+                      "description":  "侧栏的「下载并更新」窗口里，每个产品版本会告诉用户这次修了什么、改了什么。新版用结构化中文说明，再也不会出现「当前没有可用的界面更新」。",
+                      "type":  "已修复"
+                  },
+                  {
+                      "title":  "侧栏不再误报 NEW",
+                      "description":  "在开发目录或非标准安装目录里，侧栏不再显示误导的「NEW」徽标和「下载并更新」按钮。会直接告诉用户「已是最新」并说明原因。",
+                      "type":  "本次更新"
+                  },
+                  {
+                      "title":  "整产品升级更直观",
+                      "description":  "点「下载并更新」后，整产品（页面 + Gateway + 启动器 + 剪映 Writer）自动升级，过程可视化。项目、素材和设置都保留。",
+                      "type":  "体验"
+                  }
               ],
     "package":  {
                     "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.13-windows.zip",
