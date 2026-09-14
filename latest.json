@@ -1,30 +1,18 @@
 {
-    "schema_version": 1,
-    "scope": "full",
-    "commit": "8419f302274d16bb6a5685ba5062c02c56a15ab6",
-    "version": "v0.3.12",
-    "summary": "OpenVideo v0.3.12 整产品更新",
-    "notes": [
-        {
-            "type": "已修复",
-            "title": "更新提示不再误报「有可用更新」",
-            "description": "在开发目录或非标准安装目录下，侧栏不再显示误导的「NEW」徽标和「下载并更新」按钮。如果当前版本无法使用侧栏升级，会显示「已是最新」并说明原因。"
-        },
-        {
-            "type": "本次更新",
-            "title": "整产品可一键升级",
-            "description": "点「下载并更新」后，整产品自动升级（页面 + 后台 + 启动器 + 剪映 Writer）。项目、素材和设置都保留，升级失败会自动回退到上一版本。"
-        },
-        {
-            "type": "说明",
-            "title": "安装目录要求",
-            "description": "侧栏升级只适用于标准安装目录（%LOCALAPPDATA%\\OpenVideo\\program）。在开发仓库或非标准位置运行时，请用 scripts/Ship-OpenVideoColleagueUpdate.ps1 手动发布完整包。"
-        }
-    ],
-    "package": {
-        "url": "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.12-windows.zip",
-        "sha256": "ea64a422e5ce52cdaa738673b6380ed6c6a1100ff9665ea206133601b8a946d9",
-        "bytes": 94737437
-    },
-    "publishedAt": "2026-09-14T16:25:25.2085272+00:00"
+    "schema_version":  1,
+    "scope":  "full",
+    "commit":  "cec31f8e2401d9af3404886139a9f9934a409ccf",
+    "version":  "v0.3.13",
+    "summary":  "OpenVideo v0.3.13 full product update",
+    "notes":  [
+                  "Whole product update: page + Gateway source + scripts + config + OpenVideo.cmd + docs",
+                  "Run scripts/Install-OpenVideoOnColleagueMachine.ps1 to verify, swap, and bootstrap a colleague machine",
+                  "Projects and local settings are preserved; failed install rolls back to the previous release"
+              ],
+    "package":  {
+                    "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.13-windows.zip",
+                    "sha256":  "5c5af892dbe16a392e17247166ca6367374c9e4748ea0444bdbbd5c228fea23c",
+                    "bytes":  94738827
+                },
+    "publishedAt":  "2026-09-14T16:53:02.5712079+00:00"
 }
