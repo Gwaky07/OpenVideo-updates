@@ -1,18 +1,40 @@
 {
-    "schema_version":  1,
-    "scope":  "full",
-    "commit":  "4db2691d94506f1898769364c04900a410c0981b",
-    "version":  "v0.3.13",
-    "summary":  "OpenVideo v0.3.13 full product update",
-    "notes":  [
-                  "Whole product update: page + Gateway source + scripts + config + OpenVideo.cmd + docs",
-                  "Run scripts/Install-OpenVideoOnColleagueMachine.ps1 to verify, swap, and bootstrap a colleague machine",
-                  "Projects and local settings are preserved; failed install rolls back to the previous release"
-              ],
-    "package":  {
-                    "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.13-windows.zip",
-                    "sha256":  "6861dda28e55c01601a11abd5b3e08474da8a418818ad41977e8ffab40480cdb",
-                    "bytes":  702761167
-                },
-    "publishedAt":  "2026-09-14T18:48:54.6478912+00:00"
+    "schema_version": 1,
+    "scope": "full",
+    "commit": "4db2691d94506f1898769364c04900a410c0981b",
+    "version": "v0.3.13",
+    "summary": "OpenVideo v0.3.13 整产品更新 — 同事首次启动不再需要长时间编译",
+    "notes": [
+        {
+            "type": "feature",
+            "title": "开箱即用：首次启动不再等编译",
+            "description": "同事机解压后直接双击 OpenVideo.cmd，Bootstrap 会自动把构建好的网页、Gateway 编译产物、FFmpeg、Whisper 模型、构建缓存全部就位；首次冷启动只需一次 pnpm install 下载 Node.js 依赖（约 3–8 分钟），不再需要重新 pnpm build。"
+        },
+        {
+            "type": "feature",
+            "title": "整产品自动更新",
+            "description": "侧栏「下载并更新」按钮现在覆盖网页 + Gateway + 启动器 + OpenVideo.cmd + 配置 + 剪映 Writer，无需手动替换任何文件。安装器（OpenVideo-Setup.exe）也包含在 ZIP 内。"
+        },
+        {
+            "type": "fix",
+            "title": "修复：dev 主机误显示「有可用更新」",
+            "description": "开发机仓库现在会显示「已是最新」，并在侧栏说明这是开发仓库、请用 scripts/Ship-OpenVideoColleagueUpdate.ps1 发布完整包，避免误点。"
+        },
+        {
+            "type": "fix",
+            "title": "修复：素材分析依赖首次启动卡住",
+            "description": "FFmpeg / Whisper / 嵌入模型已经从 dev 主机的私目录预填到 ZIP 里，同事机第一次跑素材分析时不需要再下载约 770 MB 的依赖包。"
+        },
+        {
+            "type": "fix",
+            "title": "修复：网关构建脚本未打包",
+            "description": "apps/gateway/scripts 之前被 ZIP 漏掉，Bootstrap 会报 Cannot find module；现在它已经被加入打包白名单。"
+        }
+    ],
+    "package": {
+        "url": "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.13-windows.zip",
+        "sha256": "6861dda28e55c01601a11abd5b3e08474da8a418818ad41977e8ffab40480cdb",
+        "bytes": 702761167
+    },
+    "publishedAt": "2026-09-14T18:48:54.6478912+00:00"
 }
