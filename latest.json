@@ -1,18 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "full",
-    "commit":  "b58286b0ff08224d408976b7a572e0fd1e949a7f",
-    "version":  "v0.3.11",
-    "summary":  "OpenVideo v0.3.11 full product update",
-    "notes":  [
-                  "Whole product update: page + Gateway source + scripts + config + OpenVideo.cmd + docs",
-                  "Run scripts/Install-OpenVideoOnColleagueMachine.ps1 to verify, swap, and bootstrap a colleague machine",
-                  "Projects and local settings are preserved; failed install rolls back to the previous release"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.11-windows.zip",
-                    "sha256":  "e4cebf43183515edff17bb1d56289a3b6511cc23983c401de14f8459419e9751",
-                    "bytes":  94733493
-                },
-    "publishedAt":  "2026-09-14T09:51:01.3888184+00:00"
+  "schema_version": 1,
+  "scope": "full",
+  "commit": "b58286b0ff08224d408976b7a572e0fd1e949a7f",
+  "version": "v0.3.11",
+  "summary": "OpenVideo v0.3.11 full product update",
+  "notes": [
+    "Whole product update: page + Gateway source + scripts + config + OpenVideo.cmd + docs",
+    "Run scripts/Install-OpenVideoOnColleagueMachine.ps1 to verify, swap, and bootstrap a colleague machine",
+    "Projects and local settings are preserved; failed install rolls back to the previous release",
+    "Bootstrap auto-downloads FFmpeg and Whisper on first launch (no manual install)"
+  ],
+  "package": {
+    "url": "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.11-windows.zip",
+    "sha256": "e4cebf43183515edff17bb1d56289a3b6511cc23983c401de14f8459419e9751",
+    "bytes": 94733493
+  },
+  "publishedAt": "2026-09-14T10:00:00.0000000+00:00"
 }
