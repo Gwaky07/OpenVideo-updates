@@ -3,16 +3,18 @@
     "scope":  "full",
     "commit":  "bb82ba78a099e8deaf13cb8ddfa7261806069c80",
     "version":  "v0.3.14",
-    "summary":  "OpenVideo v0.3.14 full product update",
+    "summary":  "OpenVideo v0.3.14 完整产品更新",
     "notes":  [
-                  "Whole product update: page + Gateway source + scripts + config + OpenVideo.cmd + docs",
-                  "Run scripts/Install-OpenVideoOnColleagueMachine.ps1 to verify, swap, and bootstrap a colleague machine",
-                  "Projects and local settings are preserved; failed install rolls back to the previous release"
+                  "新增系统状态页「还需要」面板：启动后一目了然缺 LLM / 素材分析 / 成片预览 / 剪映草稿配置",
+                  "全部走 Gateway 同源 API 边界，只暴露脱敏状态和原因，不泄露真实路径或密钥",
+                  "配套 README 中文说明；内置素材分析依赖解压逻辑，同事首次启动直接可用",
+                  "完整产品更新包：前端界面 + Gateway 源码 + 启动脚本 + 配置 + OpenVideo.cmd + 文档",
+                  "运行 Install-OpenVideoOnColleagueMachine.ps1 完成同事机验证、替换和引导；项目和个人设置保持不变"
               ],
     "package":  {
                     "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.14-windows.zip",
                     "sha256":  "e69fb95beb7ec206fb19d2778d7a162b6b1cb46e63e7c1d0b1689438eb44aca3",
                     "bytes":  702770576
                 },
-    "publishedAt":  "2026-09-14T19:32:25.2511347+00:00"
+    "publishedAt":  "2026-09-14T19:41:06.2917860+00:00"
 }
