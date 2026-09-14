@@ -1,7 +1,7 @@
 {
     "schema_version":  1,
     "scope":  "full",
-    "commit":  "bdd968397935b19ebb9d281dd0770c2d1e9736c4",
+    "commit":  "483fe0499aa1260bd011e239d7258b1fdfb5ddf9",
     "version":  "v0.3.11",
     "summary":  "OpenVideo v0.3.11 full product update",
     "notes":  [
@@ -14,5 +14,5 @@
                     "sha256":  "112bd9110c6cb24616f41fbafdf08064dc7de508697e1c8e73a95eff9271db7e",
                     "bytes":  20049796
                 },
-    "publishedAt":  "2026-09-14T04:32:33.1416496+00:00"
+    "publishedAt":  "2026-09-14T04:54:02.6897565+00:00"
 }
