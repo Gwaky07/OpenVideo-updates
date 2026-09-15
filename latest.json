@@ -1,6 +1,6 @@
 {
     "schema_version":  1,
-    "scope":  "portable-full",
+    "scope":  "full",
     "commit":  "d0a780e4d2521ad20e04e2a688a50fdf1425b41c",
     "buildRevision":  "e98569b47f45ffb0a0ad387633e292ac3a484b70adc5dfb2a7f583725defbfa8",
     "version":  "v0.3.14",
