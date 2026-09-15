@@ -1,7 +1,7 @@
 {
     "schema_version":  1,
     "scope":  "full",
-    "commit":  "49b23f96e2cf3f4aa203f539345fcb1e78fe4293",
+    "commit":  "ebb3d2a131f484246541cf5b19a9d4b8b35c06c1",
     "version":  "v0.3.14",
     "summary":  "OpenVideo v0.3.14 完整产品更新",
     "notes":  [
@@ -13,8 +13,8 @@
               ],
     "package":  {
                     "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.14-windows.zip",
-                    "sha256":  "e69fb95beb7ec206fb19d2778d7a162b6b1cb46e63e7c1d0b1689438eb44aca3",
-                    "bytes":  702770576
+                    "sha256":  "a94bced1598bde099c137481e24f2a2994e80036ab2448f3a3ad59d249d6751b",
+                    "bytes":  702771137
                 },
-    "publishedAt":  "2026-09-14T19:44:43.7158708+00:00"
+    "publishedAt":  "2026-09-15T06:33:20.5755194+00:00"
 }
