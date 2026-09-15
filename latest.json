@@ -1,20 +1,24 @@
 {
     "schema_version":  1,
-    "scope":  "full",
-    "commit":  "7a3134fbe40b70dd9b660c7a8c87eb4071bda9d9",
+    "scope":  "portable-full",
+    "commit":  "d0a780e4d2521ad20e04e2a688a50fdf1425b41c",
+    "buildRevision":  "e98569b47f45ffb0a0ad387633e292ac3a484b70adc5dfb2a7f583725defbfa8",
     "version":  "v0.3.14",
-    "summary":  "OpenVideo v0.3.14 完整产品更新",
+    "summary":  "OpenVideo v0.3.14 portable folder - unzip and double-click OpenVideo.cmd",
     "notes":  [
-                  "新增系统状态页「还需要」面板：启动后一目了然缺 LLM / 素材分析 / 成片预览 / 剪映草稿配置",
-                  "全部走 Gateway 同源 API 边界，只暴露脱敏状态和原因，不泄露真实路径或密钥",
-                  "配套 README 中文说明；内置素材分析依赖解压逻辑，同事首次启动直接可用",
-                  "完整产品更新包：前端界面 + Gateway 源码 + 启动脚本 + 配置 + OpenVideo.cmd + 文档",
-                  "运行 Install-OpenVideoOnColleagueMachine.ps1 完成同事机验证、替换和引导；项目和个人设置保持不变"
+                  "Unzip then double-click OpenVideo.cmd; Bootstrap auto-installs Node 22, Python 3.12, Git, FFmpeg, Whisper if missing.",
+                  "No admin rights required; everything goes into %LOCALAPPDATA%\\OpenVideo\\data\\.",
+                  "Bootstrap picks a free port (8787 if available, otherwise 8790-8889).",
+                  "Colleague side-panel Download and Update button pulls this build on next launch.",
+                  "Includes gateway + web build artifacts + jianying native writer; same tree as the developer main checkout."
               ],
     "package":  {
-                    "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.14-windows.zip",
-                    "sha256":  "864cb2fc634f12808b26c839e0002d50a05713f4f93b6c1fd6e1966c0957b9cf",
-                    "bytes":  702773692
+                    "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.14-portable.zip",
+                    "sha256":  "9414e1c616435c375ff1d266da47aff61e70e585aa768220452873550ea7db81",
+                    "bytes":  961197940,
+                    "filename":  "OpenVideo-v0.3.14-portable.zip"
                 },
-    "publishedAt":  "2026-09-15T08:41:19.3813427+00:00"
+    "entrypoint":  "OpenVideo.cmd",
+    "minWindowsVersion":  "10.0.17763",
+    "publishedAt":  "2026-09-15T16:17:19.4947470Z"
 }
