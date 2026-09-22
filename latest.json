@@ -1,24 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "full",
-    "commit":  "d0a780e4d2521ad20e04e2a688a50fdf1425b41c",
-    "buildRevision":  "e98569b47f45ffb0a0ad387633e292ac3a484b70adc5dfb2a7f583725defbfa8",
-    "version":  "v0.3.14",
-    "summary":  "OpenVideo v0.3.14 portable folder - unzip and double-click OpenVideo.cmd",
-    "notes":  [
-                  "Unzip then double-click OpenVideo.cmd; Bootstrap auto-installs Node 22, Python 3.12, Git, FFmpeg, Whisper if missing.",
-                  "No admin rights required; everything goes into %LOCALAPPDATA%\\OpenVideo\\data\\.",
-                  "Bootstrap picks a free port (8787 if available, otherwise 8790-8889).",
-                  "Colleague side-panel Download and Update button pulls this build on next launch.",
-                  "Includes gateway + web build artifacts + jianying native writer; same tree as the developer main checkout."
-              ],
-    "package":  {
-                    "url":  "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.14-portable.zip",
-                    "sha256":  "9414e1c616435c375ff1d266da47aff61e70e585aa768220452873550ea7db81",
-                    "bytes":  961197940,
-                    "filename":  "OpenVideo-v0.3.14-portable.zip"
-                },
-    "entrypoint":  "OpenVideo.cmd",
-    "minWindowsVersion":  "10.0.17763",
-    "publishedAt":  "2026-09-15T16:17:19.4947470Z"
+  "schema_version": 1,
+  "scope": "full",
+  "commit": "8fc4320ba3a580f983f3eae70db557e442d957d5",
+  "version": "v0.3.15",
+  "summary": "OpenVideo v0.3.15 完整产品更新",
+  "notes": [
+    "页面、Gateway、启动器、OpenVideo.cmd 与 OpenVideo Logo 一起更新",
+    "首次双击 OpenVideo.cmd 自动创建桌面 Logo；.cmd 仍保留为备用入口",
+    "项目、素材、模型、Catalog、API 配置和个人运行数据保留在用户目录，不会打进或被包覆盖",
+    "完整包已通过结构、文件边界、SHA-256 和启动器回归校验"
+  ],
+  "package": {
+    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.15/OpenVideo-v0.3.15-windows.zip",
+    "sha256": "0e83005c1949588506cb3b6a973014bcb97899367d33615943e12ae5eedfb2a0",
+    "bytes": 614859089
+  },
+  "publishedAt": "2026-09-22T10:24:08.5011303+08:00"
 }
