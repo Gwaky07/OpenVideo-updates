@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "scope": "full",
-  "commit": "8fc4320ba3a580f983f3eae70db557e442d957d5",
-  "version": "v0.3.15",
-  "summary": "OpenVideo v0.3.15 完整产品更新",
+  "commit": "e1782bb155a42b2ffe7804b6d815607b6d71068d",
+  "version": "v0.3.16",
+  "summary": "修复 Windows 启动器批处理换行解析",
   "notes": [
     "页面、Gateway、启动器、OpenVideo.cmd 与 OpenVideo Logo 一起更新",
     "首次双击 OpenVideo.cmd 自动创建桌面 Logo；.cmd 仍保留为备用入口",
@@ -11,9 +11,9 @@
     "完整包已通过结构、文件边界、SHA-256 和启动器回归校验"
   ],
   "package": {
-    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.15/OpenVideo-v0.3.15-windows.zip",
-    "sha256": "0e83005c1949588506cb3b6a973014bcb97899367d33615943e12ae5eedfb2a0",
-    "bytes": 614859089
+    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.16/OpenVideo-v0.3.16-windows.zip",
+    "sha256": "425455ba1333b7ab071817d92e3e4a8e999c8e005c3d4cc60cf4192e9baa5c38",
+    "bytes": 614859059
   },
   "publishedAt": "2026-09-22T10:24:08.5011303+08:00"
 }
