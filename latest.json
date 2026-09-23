@@ -1,20 +1,17 @@
 {
-  "schema_version": 1,
-  "scope": "full",
-  "commit": "09c3fe0c",
-  "version": "v0.3.20",
-  "summary": "OpenVideo v0.3.20 完整产品更新",
-  "notes": [
-    "新增系统状态页、还需要」面板：启动后一目了然缺 LLM / 素材分析 / 成片预览 / 剪映草稿配置",
-    "全部走 Gateway 同源 API 边界，只暴露脱敏状态和原因，不泄露真实路径或密钥",
-    "配套 README 中文说明；内置素材分析依靠解压逻辑，同事首次启动直接可用",
-    "完整产品更新包：前端界面 + Gateway 源码 + 启动脚本 + 配置 + OpenVideo.cmd + 文档",
-    "运行 Install-OpenVideoOnColleagueMachine.ps1 完成同事机验证、替换和引导；项目和个人设置保持不变"
-  ],
-  "package": {
-    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.20/OpenVideo-v0.3.20-windows.zip",
-    "sha256": "9ad867d153f5554624955c2753535b0dfdc4f8eb06afb611e77d4608e68f6bcc",
-    "bytes": 4563356
-  },
-  "publishedAt": "2026-09-23T15:40:24.1023448+08:00"
+    "schema_version":  1,
+    "scope":  "full",
+    "commit":  "2254dd22f3c840946db18fc8ea56c4970162fb80",
+    "version":  "v0.3.21",
+    "summary":  "Full product update",
+    "notes":  [
+                  "Updated the packaged application",
+                  "Projects and local settings are preserved"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.21-windows.zip",
+                    "sha256":  "40755975b7cdb7ab0dc4a721d7cf27c03dd6d8b8c9b91a98b8570015df176402",
+                    "bytes":  529511884
+                },
+    "publishedAt":  "2026-09-23T14:29:29.2778148+00:00"
 }
