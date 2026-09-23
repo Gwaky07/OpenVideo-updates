@@ -11,7 +11,7 @@
     "Failed apply rolls back to the previous release"
   ],
   "package": {
-    "url": "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.21-windows.zip",
+    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.21/OpenVideo-v0.3.21-windows.zip",
     "sha256": "40755975b7cdb7ab0dc4a721d7cf27c03dd6d8b8c9b91a98b8570015df176402",
     "bytes": 529511884
   },
