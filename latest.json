@@ -1,17 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "full",
-    "commit":  "2254dd22f3c840946db18fc8ea56c4970162fb80",
-    "version":  "v0.3.21",
-    "summary":  "Full product update",
-    "notes":  [
-                  "Updated the packaged application",
-                  "Projects and local settings are preserved"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.21-windows.zip",
-                    "sha256":  "40755975b7cdb7ab0dc4a721d7cf27c03dd6d8b8c9b91a98b8570015df176402",
-                    "bytes":  529511884
-                },
-    "publishedAt":  "2026-09-23T14:29:29.2778148+00:00"
+  "schema_version": 1,
+  "scope": "full",
+  "commit": "2254dd22f3c840946db18fc8ea56c4970162fb80",
+  "version": "v0.3.21",
+  "summary": "OpenVideo v0.3.21 full product update",
+  "notes": [
+    "Hotfix: replaces broken v0.3.20 release (4.5 MB front-end only asset)",
+    "Full product update: page + bundled Gateway + launcher scripts + config + OpenVideo.cmd + docs",
+    "Bootstrap rebuilds node_modules on first launch; original media and workspace are preserved",
+    "Failed apply rolls back to the previous release"
+  ],
+  "package": {
+    "url": "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/OpenVideo-v0.3.21-windows.zip",
+    "sha256": "40755975b7cdb7ab0dc4a721d7cf27c03dd6d8b8c9b91a98b8570015df176402",
+    "bytes": 529511884
+  },
+  "publishedAt": "2026-09-23T14:42:00Z"
 }
