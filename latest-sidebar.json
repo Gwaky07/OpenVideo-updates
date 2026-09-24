@@ -1,0 +1,19 @@
+{
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "630e2b790c4ad41508258feccdda2bd75f2e95bb",
+    "headCommit":  "630e2b790c4ad41508258feccdda2bd75f2e95bb",
+    "version":  "v0.3.23",
+    "summary":  "Sidebar product code update v0.3.23 (no runtime; first-time installs still need the full package via private channel)",
+    "notes":  [
+                  "Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved on the colleague machine",
+                  "First-time installs continue to use the full OpenVideo-v0.3.23-windows.zip shared via private channel",
+                  "Projects, local settings, runtime, models and Catalog are preserved"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.23-windows.zip",
+                    "sha256":  "0cd5658018632f13bc39dad6f3e9b82f543fa0a0264aabebd821636250675e28",
+                    "bytes":  3207948
+                },
+    "publishedAt":  "2026-09-24T03:55:46.5783205+00:00"
+}
