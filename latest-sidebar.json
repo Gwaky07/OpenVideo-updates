@@ -1,8 +1,8 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "630e2b790c4ad41508258feccdda2bd75f2e95bb",
-    "headCommit":  "630e2b790c4ad41508258feccdda2bd75f2e95bb",
+    "commit":  "d0727bd905d198509af673228646fd766a0aa8da",
+    "headCommit":  "d0727bd905d198509af673228646fd766a0aa8da",
     "version":  "v0.3.23",
     "summary":  "Sidebar product code update v0.3.23 (no runtime; first-time installs still need the full package via private channel)",
     "notes":  [
@@ -12,8 +12,8 @@
               ],
     "package":  {
                     "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.23-windows.zip",
-                    "sha256":  "4fdae8644a3f0c0e3cb632072978b76e6b2f5d2b066352cc50de1224d1d594d2",
-                    "bytes":  3207981
+                    "sha256":  "bc2b01582087f730acf9485ccca8b49057c288cf444bcb6131f49fa0563d41a0",
+                    "bytes":  3207966
                 },
-    "publishedAt":  "2026-09-24T09:19:09.8266082+00:00"
+    "publishedAt":  "2026-09-24T10:49:53.2824258+00:00"
 }
