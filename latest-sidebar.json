@@ -1,19 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "sidebar",
-    "commit":  "7542d32ce89d76c2c3083503924670c6aa04feb4",
-    "headCommit":  "7542d32ce89d76c2c3083503924670c6aa04feb4",
-    "version":  "v0.3.24",
-    "summary":  "Sidebar product code update v0.3.24 (no runtime; first-time installs still need the full package via private channel)",
-    "notes":  [
-                  "Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved on the colleague machine",
-                  "First-time installs continue to use the full OpenVideo-v0.3.24-windows.zip shared via private channel",
-                  "Projects, local settings, runtime, models and Catalog are preserved"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.24-windows.zip",
-                    "sha256":  "a23cfca6b8f497ec8993bdc62ddd04cc30e32c78a407660f79870761d7736e64",
-                    "bytes":  3209089
-                },
-    "publishedAt":  "2026-09-24T15:08:37.3940023+00:00"
+  "schema_version": 1,
+  "scope": "sidebar",
+  "commit": "eb02f732857615f02cc03543d87b51a445c2351d",
+  "headCommit": "eb02f732857615f02cc03543d87b51a445c2351d",
+  "version": "v0.3.27",
+  "summary": "v0.3.27：修复正式包端口冲突并完善更新进度体验",
+  "notes": [
+    "新正式包可安全接管同一用户正在运行的旧正式包",
+    "其他用户、开发工作树或未知程序占用 8787 时自动选择空闲端口",
+    "更新下载继续显示实时进度、百分比和错误原因，项目与运行时数据保持不变"
+  ],
+  "package": {
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.27-windows.zip",
+    "sha256": "5a94e35bda17edbeb81b1441b7ca579a38884eac0158395f77712377e9e08055",
+    "bytes": 3241137
+  },
+  "publishedAt": "2026-09-27T16:00:34.7241072+00:00"
 }

@@ -1,7 +1,7 @@
-# OpenVideo sidebar update feed
+# OpenVideo 侧栏更新源
 
-Sidebar product code only (no runtime; no third-party upstream; no source tree).
+这里只发布侧栏产品代码，不包含运行时、第三方上游目录或源码树。
 
-Colleagues never log into GitHub. The workbench downloads latest-sidebar.json and OpenVideo-sidebar-<version>-windows.zip.
+使用者无需登录 GitHub；工作台会下载 latest-sidebar.json 和 OpenVideo-sidebar-<version>-windows.zip。
 
-First-time installs still need the full package (Node.js / Python / FFmpeg / Whisper / Playwright / app code) shared via private channel (OneDrive / Lark / WeChat transfer).
+首次安装仍需通过私有渠道获取完整包，其中包含 Node.js、Python、FFmpeg、Whisper、Playwright 和应用代码。
