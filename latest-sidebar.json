@@ -1,19 +1,19 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "eb02f732857615f02cc03543d87b51a445c2351d",
-  "headCommit": "eb02f732857615f02cc03543d87b51a445c2351d",
-  "version": "v0.3.27",
-  "summary": "v0.3.27：修复正式包端口冲突并完善更新进度体验",
-  "notes": [
-    "新正式包可安全接管同一用户正在运行的旧正式包",
-    "其他用户、开发工作树或未知程序占用 8787 时自动选择空闲端口",
-    "更新下载继续显示实时进度、百分比和错误原因，项目与运行时数据保持不变"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.27-windows.zip",
-    "sha256": "5a94e35bda17edbeb81b1441b7ca579a38884eac0158395f77712377e9e08055",
-    "bytes": 3241137
-  },
-  "publishedAt": "2026-09-27T16:00:34.7241072+00:00"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "a32bcc6cf8fbff0749c6e4847b191ea63199d108",
+    "headCommit":  "a32bcc6cf8fbff0749c6e4847b191ea63199d108",
+    "version":  "v0.3.27",
+    "summary":  "v0.3.27：统一更新进度条并完善端口冲突处理",
+    "notes":  [
+                  "更新弹窗和侧栏进度条统一使用产品现有的黑灰色扫光样式",
+                  "下载继续显示实时百分比与已下载字节数，更新失败可重试",
+                  "新正式包可安全处理旧实例与端口占用，项目、设置和运行时数据保持不变"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.27-windows.zip",
+                    "sha256":  "7366363d4f1c193a68e60af2a284ee08a9aa2a8acebc176ce8a69cff41091a80",
+                    "bytes":  3241244
+                },
+    "publishedAt":  "2026-09-27T16:57:31.5751102+00:00"
 }
