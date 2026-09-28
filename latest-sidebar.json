@@ -1,19 +1,19 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
-  "headCommit": "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
-  "version": "v0.3.33",
-  "summary": "v0.3.33：修复部分电脑更新后一直停留在正在重启",
-  "notes": [
-    "更新器沿用当前工作台实际运行端口，避免动态端口与配置端口不一致",
-    "更新后浏览器等待同一端口的新后台启动身份",
-    "异常重连等待缩短为两分钟；项目、素材、模板、设置和本机运行环境保持不变"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.33-windows.zip",
-    "sha256": "096d465963c5cce4727516fa48fa33a2ffa9727a63131fcd913390e2eaa5e63e",
-    "bytes": 3244508
-  },
-  "publishedAt": "2026-09-28T16:32:49.5819718+08:00"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "067f22e5421b5543a1fca73aeabe4098ab7a5e9f",
+    "headCommit":  "067f22e5421b5543a1fca73aeabe4098ab7a5e9f",
+    "version":  "v0.3.35",
+    "summary":  "v0.3.35：修复更新后启动器消失",
+    "notes":  [
+                  "更新包和内嵌备用载荷都会保留带 Logo 的 Start-OpenVideo.exe",
+                  "修正载荷交接与暂存目录清理时序",
+                  "已缺少启动器的电脑可先运行 OpenVideo.cmd 完成本次修复；项目、素材、模板和设置保持不变"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.35-windows.zip",
+                    "sha256":  "9f498b056921f1a8109cdbdc19d33e37def682d451aebd699d58c5e9797d2b55",
+                    "bytes":  3264127
+                },
+    "publishedAt":  "2026-09-28T09:14:00.4194182+00:00"
 }
