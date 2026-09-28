@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "scope": "sidebar",
-  "commit": "34298cad8d1a80457cf3b8cab5e08b7689ba341d",
-  "headCommit": "34298cad8d1a80457cf3b8cab5e08b7689ba341d",
-  "version": "v0.3.29",
-  "summary": "v0.3.29：修复便携运行时标记编码和能力识别",
+  "commit": "eec937c30d5817b124e434652392b3ea6f239736",
+  "headCommit": "eec937c30d5817b124e434652392b3ea6f239736",
+  "version": "v0.3.30",
+  "summary": "v0.3.30：优化不同屏幕尺寸的流程导航和低高度侧栏显示",
   "notes": [
-    "修复便携运行时标记带 UTF-8 BOM 时成片预览与剪映草稿被误判为不可用的问题",
-    "兼容已经安装的 v0.3.28，更新后素材分析、成片预览和剪映草稿能力可正常识别",
-    "保留黑灰色扫光下载进度、实时百分比和字节数；项目、素材、设置与运行时数据保持不变"
+    "紧凑宽度与手机窄屏下，素材到剪映交付六个流程入口保持可见",
+    "低高度桌面窗口中，系统设置与更新入口不再相互遮挡；更矮窗口可在侧栏导航内滚动",
+    "更新弹窗限制在视口内并支持内部滚动；项目、素材、设置和本机运行时数据保持不变"
   ],
   "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.29-windows.zip",
-    "sha256": "3deb6546d2d149247f49da0effaabe4d7ed34b11537fda63308f0bb15c0134e1",
-    "bytes": 3260118
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.30-windows.zip",
+    "sha256": "9dcbba50e75145095f4080272f969c4fb4d38d98758d6f3436783596ed63df0c",
+    "bytes": 3243304
   },
-  "publishedAt": "2026-09-28T02:46:49.9601962+00:00"
+  "publishedAt": "2026-09-28T04:52:55.0335081+00:00"
 }
