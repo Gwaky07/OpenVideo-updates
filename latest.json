@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "scope": "full",
-  "commit": "2254dd22f3c840946db18fc8ea56c4970162fb80",
-  "version": "v0.3.21",
-  "summary": "OpenVideo v0.3.21 full product update",
+  "commit": "38b45eb54236f0660ceca2346c14d0fc6e7e6590",
+  "version": "v0.3.30",
+  "summary": "OpenVideo v0.3.30 full product update",
   "notes": [
-    "Hotfix: replaces broken v0.3.20 release (4.5 MB front-end only asset)",
-    "Full product update: page + bundled Gateway + launcher scripts + config + OpenVideo.cmd + docs",
-    "Bootstrap rebuilds node_modules on first launch; original media and workspace are preserved",
-    "Failed apply rolls back to the previous release"
+    "完整产品更新：前端、Gateway bundle、启动器、配置和便携运行时一起更新",
+    "包内不含私有源码、API Key、用户数据或开发仓库；项目和本地设置保持不变",
+    "首次启动使用包内 Node/Python/FFmpeg/Whisper 与剪映 Provider",
+    "更新失败自动回滚到上一版本"
   ],
   "package": {
-    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.21/OpenVideo-v0.3.21-windows.zip",
-    "sha256": "40755975b7cdb7ab0dc4a721d7cf27c03dd6d8b8c9b91a98b8570015df176402",
-    "bytes": 529511884
+    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.30/OpenVideo-v0.3.30-windows.zip",
+    "sha256": "0c39c5bb3a1eca90a6ad996fc301127b8c460b2149aa871dcb904921e823546f",
+    "bytes": 811494022
   },
-  "publishedAt": "2026-09-23T14:42:00Z"
+  "publishedAt": "2026-09-28T05:42:00Z"
 }
