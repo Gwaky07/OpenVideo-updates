@@ -1,19 +1,19 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
-  "headCommit": "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
-  "version": "v0.3.33",
-  "summary": "v0.3.33：修复部分电脑更新后一直停留在正在重启",
-  "notes": [
-    "更新器沿用当前工作台实际运行端口，避免动态端口与配置端口不一致",
-    "更新后浏览器等待同一端口的新后台启动身份",
-    "异常重连等待缩短为两分钟；项目、素材、模板、设置和本机运行环境保持不变"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.33-windows.zip",
-    "sha256": "096d465963c5cce4727516fa48fa33a2ffa9727a63131fcd913390e2eaa5e63e",
-    "bytes": 3244508
-  },
-  "publishedAt": "2026-09-28T16:32:49.5819718+08:00"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "1ca21210f15a11338ce0a108b23d617bd73766a2",
+    "headCommit":  "1ca21210f15a11338ce0a108b23d617bd73766a2",
+    "version":  "v0.3.34",
+    "summary":  "v0.3.34：更新通道实机测试",
+    "notes":  [
+                  "验证 v0.3.33 新电脑能够发现并下载公开更新",
+                  "可观察下载百分比、进度条、安装状态和更新后重启",
+                  "本次不调整业务功能；项目、素材、模板、设置和运行环境保持不变"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.34-windows.zip",
+                    "sha256":  "eefaed117beb5452d6ba5160a5a5367045a7cae2f1d941b229ee453e2f34f89e",
+                    "bytes":  3244505
+                },
+    "publishedAt":  "2026-09-28T08:57:07.4738502+00:00"
 }
