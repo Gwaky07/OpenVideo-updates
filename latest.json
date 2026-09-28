@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "scope": "full",
-  "commit": "38b45eb54236f0660ceca2346c14d0fc6e7e6590",
+  "commit": "eec937c30d5817b124e434652392b3ea6f239736",
   "version": "v0.3.30",
   "summary": "OpenVideo v0.3.30 full product update",
   "notes": [
@@ -12,8 +12,8 @@
   ],
   "package": {
     "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.30/OpenVideo-v0.3.30-windows.zip",
-    "sha256": "0c39c5bb3a1eca90a6ad996fc301127b8c460b2149aa871dcb904921e823546f",
-    "bytes": 811494022
+    "sha256": "a55f34e165716f3141bbe9801b4236ee48f0dd60adcb6fa50853f81acbb97ea0",
+    "bytes": 811491978
   },
   "publishedAt": "2026-09-28T05:42:00Z"
 }
