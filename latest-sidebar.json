@@ -1,19 +1,19 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "eec937c30d5817b124e434652392b3ea6f239736",
-  "headCommit": "eec937c30d5817b124e434652392b3ea6f239736",
-  "version": "v0.3.30",
-  "summary": "v0.3.30：优化不同屏幕尺寸的流程导航和低高度侧栏显示",
-  "notes": [
-    "紧凑宽度与手机窄屏下，素材到剪映交付六个流程入口保持可见",
-    "低高度桌面窗口中，系统设置与更新入口不再相互遮挡；更矮窗口可在侧栏导航内滚动",
-    "更新弹窗限制在视口内并支持内部滚动；项目、素材、设置和本机运行时数据保持不变"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.30-windows.zip",
-    "sha256": "9dcbba50e75145095f4080272f969c4fb4d38d98758d6f3436783596ed63df0c",
-    "bytes": 3243304
-  },
-  "publishedAt": "2026-09-28T04:52:55.0335081+00:00"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "6fa2d87108cb102ae694c565b41025307773dffd",
+    "headCommit":  "6fa2d87108cb102ae694c565b41025307773dffd",
+    "version":  "v0.3.31",
+    "summary":  "v0.3.31：修复项目删除超时与删除后旧卡片残留",
+    "notes":  [
+                  "删除请求等待后台完成任务、分析结果、授权与模板引用清理，不再受通用 5 秒超时限制",
+                  "删除响应短暂中断后自动核对后台项目清单，已删除项目无需刷新即可从页面移除",
+                  "更新保留现有项目、素材、设置、模型和本机运行环境"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.31-windows.zip",
+                    "sha256":  "77f4c120d18e8a0594169b820f86326761cf39aaa4c28f6491505cef9af34c73",
+                    "bytes":  3243641
+                },
+    "publishedAt":  "2026-09-28T07:20:20.5960424+00:00"
 }
