@@ -1,17 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "sidebar",
-    "commit":  "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
-    "headCommit":  "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
-    "version":  "v0.3.33",
-    "summary":  "v0.3.33：修复部分电脑更新后一直停留在正在重启",
-    "notes":  [
-                  "\"更新器沿用当前工作台实际运行端口，避免动态端口与配置端口不一致\",\"更新后浏览器等待同一端口的新后台启动身份\",\"异常重连等待缩短为两分钟；项目、素材、模板、设置和本机运行环境保持不变\""
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.33-windows.zip",
-                    "sha256":  "096d465963c5cce4727516fa48fa33a2ffa9727a63131fcd913390e2eaa5e63e",
-                    "bytes":  3244508
-                },
-    "publishedAt":  "2026-09-28T08:32:49.5819718+00:00"
+  "schema_version": 1,
+  "scope": "sidebar",
+  "commit": "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
+  "headCommit": "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
+  "version": "v0.3.33",
+  "summary": "v0.3.33：修复部分电脑更新后一直停留在正在重启",
+  "notes": [
+    "更新器沿用当前工作台实际运行端口，避免动态端口与配置端口不一致",
+    "更新后浏览器等待同一端口的新后台启动身份",
+    "异常重连等待缩短为两分钟；项目、素材、模板、设置和本机运行环境保持不变"
+  ],
+  "package": {
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.33-windows.zip",
+    "sha256": "096d465963c5cce4727516fa48fa33a2ffa9727a63131fcd913390e2eaa5e63e",
+    "bytes": 3244508
+  },
+  "publishedAt": "2026-09-28T16:32:49.5819718+08:00"
 }
