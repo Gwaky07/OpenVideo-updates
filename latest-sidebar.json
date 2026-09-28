@@ -1,19 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "sidebar",
-    "commit":  "6fa2d87108cb102ae694c565b41025307773dffd",
-    "headCommit":  "6fa2d87108cb102ae694c565b41025307773dffd",
-    "version":  "v0.3.31",
-    "summary":  "v0.3.31：修复项目删除超时与删除后旧卡片残留",
-    "notes":  [
-                  "删除请求等待后台完成任务、分析结果、授权与模板引用清理，不再受通用 5 秒超时限制",
-                  "删除响应短暂中断后自动核对后台项目清单，已删除项目无需刷新即可从页面移除",
-                  "更新保留现有项目、素材、设置、模型和本机运行环境"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.31-windows.zip",
-                    "sha256":  "77f4c120d18e8a0594169b820f86326761cf39aaa4c28f6491505cef9af34c73",
-                    "bytes":  3243641
-                },
-    "publishedAt":  "2026-09-28T07:20:20.5960424+00:00"
+  "schema_version": 1,
+  "scope": "sidebar",
+  "commit": "cd68cc57fe0926ad47b32841e031efbf7fa3524b",
+  "headCommit": "cd68cc57fe0926ad47b32841e031efbf7fa3524b",
+  "version": "v0.3.32",
+  "summary": "v0.3.32：修复其他电脑无法及时收到更新提示",
+  "notes": [
+    "工作台打开时立即重新检查公开更新源，不再复用历史“已是最新”结果",
+    "运行中的工作台每五分钟以及重新回到页面时自动检查更新",
+    "公开清单请求绕过旧缓存；项目、素材、模板、设置和本机运行环境保持不变"
+  ],
+  "package": {
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.32-windows.zip",
+    "sha256": "8aa4a2ac2d5de4f837476c37d7296de0529c9d84eb95e58785207a5cf2305196",
+    "bytes": 3244159
+  },
+  "publishedAt": "2026-09-28T07:51:21.5271235+00:00"
 }
