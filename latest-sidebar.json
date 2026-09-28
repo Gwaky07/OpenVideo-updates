@@ -1,19 +1,17 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "cd68cc57fe0926ad47b32841e031efbf7fa3524b",
-  "headCommit": "cd68cc57fe0926ad47b32841e031efbf7fa3524b",
-  "version": "v0.3.32",
-  "summary": "v0.3.32：修复其他电脑无法及时收到更新提示",
-  "notes": [
-    "工作台打开时立即重新检查公开更新源，不再复用历史“已是最新”结果",
-    "运行中的工作台每五分钟以及重新回到页面时自动检查更新",
-    "公开清单请求绕过旧缓存；项目、素材、模板、设置和本机运行环境保持不变"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.32-windows.zip",
-    "sha256": "8aa4a2ac2d5de4f837476c37d7296de0529c9d84eb95e58785207a5cf2305196",
-    "bytes": 3244159
-  },
-  "publishedAt": "2026-09-28T07:51:21.5271235+00:00"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
+    "headCommit":  "cf3fee3cb270a37008a4a5d688bf5c204c15ebd0",
+    "version":  "v0.3.33",
+    "summary":  "v0.3.33：修复部分电脑更新后一直停留在正在重启",
+    "notes":  [
+                  "\"更新器沿用当前工作台实际运行端口，避免动态端口与配置端口不一致\",\"更新后浏览器等待同一端口的新后台启动身份\",\"异常重连等待缩短为两分钟；项目、素材、模板、设置和本机运行环境保持不变\""
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.33-windows.zip",
+                    "sha256":  "096d465963c5cce4727516fa48fa33a2ffa9727a63131fcd913390e2eaa5e63e",
+                    "bytes":  3244508
+                },
+    "publishedAt":  "2026-09-28T08:32:49.5819718+00:00"
 }
