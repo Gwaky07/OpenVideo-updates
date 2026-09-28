@@ -1,19 +1,20 @@
 {
-    "schema_version":  1,
-    "scope":  "sidebar",
-    "commit":  "a32bcc6cf8fbff0749c6e4847b191ea63199d108",
-    "headCommit":  "a32bcc6cf8fbff0749c6e4847b191ea63199d108",
-    "version":  "v0.3.27",
-    "summary":  "v0.3.27：统一更新进度条并完善端口冲突处理",
-    "notes":  [
-                  "更新弹窗和侧栏进度条统一使用产品现有的黑灰色扫光样式",
-                  "下载继续显示实时百分比与已下载字节数，更新失败可重试",
-                  "新正式包可安全处理旧实例与端口占用，项目、设置和运行时数据保持不变"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.27-windows.zip",
-                    "sha256":  "7366363d4f1c193a68e60af2a284ee08a9aa2a8acebc176ce8a69cff41091a80",
-                    "bytes":  3241244
-                },
-    "publishedAt":  "2026-09-27T16:57:31.5751102+00:00"
+  "schema_version": 1,
+  "scope": "sidebar",
+  "commit": "153b14fcc1ea68e37cbc2b4e5ad7a28b3b4bef95",
+  "headCommit": "153b14fcc1ea68e37cbc2b4e5ad7a28b3b4bef95",
+  "version": "v0.3.28",
+  "summary": "修复更新完成后的重启衔接与版本显示",
+  "notes": [
+    "下载完成后等待新工作台真正就绪，再显示更新完成",
+    "更新器重启期间不会提前打开未连接页面",
+    "更新完成后侧栏立即显示正确版本，无需手动刷新",
+    "保留黑灰色扫光进度、真实百分比和下载字节数"
+  ],
+  "package": {
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.28-windows.zip",
+    "sha256": "c55643aadf6909cd36faba84b9237c2e082df93b49a4f21a6f7ab51cc4422fd2",
+    "bytes": 3242625
+  },
+  "publishedAt": "2026-09-28T01:39:46.1949067+00:00"
 }
