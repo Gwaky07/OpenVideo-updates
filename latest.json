@@ -1,19 +1,15 @@
 {
   "schema_version": 1,
-  "scope": "full",
-  "commit": "eec937c30d5817b124e434652392b3ea6f239736",
-  "version": "v0.3.30",
-  "summary": "OpenVideo v0.3.30 full product update",
+  "scope": "frontend",
+  "commit": "acbf1fd2ebed707c0c99ecc452ba3726084e5d6d",
+  "version": "acbf1fd2ebed",
+  "summary": "有新的界面更新",
   "notes": [
-    "完整产品更新：前端、Gateway bundle、启动器、配置和便携运行时一起更新",
-    "包内不含私有源码、API Key、用户数据或开发仓库；项目和本地设置保持不变",
-    "首次启动使用包内 Node/Python/FFmpeg/Whisper 与剪映 Provider",
-    "更新失败自动回滚到上一版本"
+    "推送到主仓库后的界面更新"
   ],
   "package": {
-    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.30/OpenVideo-v0.3.30-windows.zip",
-    "sha256": "a55f34e165716f3141bbe9801b4236ee48f0dd60adcb6fa50853f81acbb97ea0",
-    "bytes": 811491978
-  },
-  "publishedAt": "2026-09-28T05:42:00Z"
+    "url": "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/frontend.zip",
+    "sha256": "c81e7cfe38c714d64858db4c06f6ab7ccfcd6f4a314171c7936589ea0b6e63e6",
+    "bytes": 665086
+  }
 }
