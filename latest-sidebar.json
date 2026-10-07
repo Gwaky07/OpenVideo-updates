@@ -1,19 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "sidebar",
-    "commit":  "067f22e5421b5543a1fca73aeabe4098ab7a5e9f",
-    "headCommit":  "067f22e5421b5543a1fca73aeabe4098ab7a5e9f",
-    "version":  "v0.3.35",
-    "summary":  "v0.3.35：修复更新后启动器消失",
-    "notes":  [
-                  "更新包和内嵌备用载荷都会保留带 Logo 的 Start-OpenVideo.exe",
-                  "修正载荷交接与暂存目录清理时序",
-                  "已缺少启动器的电脑可先运行 OpenVideo.cmd 完成本次修复；项目、素材、模板和设置保持不变"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.35-windows.zip",
-                    "sha256":  "9f498b056921f1a8109cdbdc19d33e37def682d451aebd699d58c5e9797d2b55",
-                    "bytes":  3264127
-                },
-    "publishedAt":  "2026-09-28T09:14:00.4194182+00:00"
+  "schema_version": 1,
+  "scope": "sidebar",
+  "commit": "acbf1fd2ebed707c0c99ecc452ba3726084e5d6d",
+  "headCommit": "acbf1fd2ebed707c0c99ecc452ba3726084e5d6d",
+  "version": "v0.3.36",
+  "summary": "修复素材分析发行依赖，恢复 Embedding 与中文 OCR",
+  "notes": [
+    "补齐 Transformers、ONNX Runtime、Tesseract.js 与简体中文 OCR 发行依赖",
+    "修复更新后自动重启与版本刷新，避免重复提示更新",
+    "保留现有项目、素材授权、模型、配置和用户数据"
+  ],
+  "package": {
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.36-windows.zip",
+    "sha256": "9918729f9c4d84a33063c34172e4f6eccde280ae2d211ae8b378a6d4a1ebaed4",
+    "bytes": 49896107
+  },
+  "publishedAt": "2026-10-07T10:27:24.7696633+00:00"
 }
