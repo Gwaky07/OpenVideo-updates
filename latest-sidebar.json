@@ -1,19 +1,20 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "4ad4d0349984d90227854e1450f45db7c8efa037",
-  "headCommit": "4ad4d0349984d90227854e1450f45db7c8efa037",
-  "version": "v0.3.37",
-  "summary": "修复素材库配置恢复和重复端口启动问题",
-  "notes": [
-    "素材库配置损坏时自动从有效临时副本恢复，并清理残留写入文件",
-    "修复偏好设置重复保存和多进程并发写入，避免素材库再次不可用",
-    "侧栏升级后的完整安装继续复用默认 8787，并保留项目、授权、模型、配置和用户数据"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.37-windows.zip",
-    "sha256": "6f835dc81331c4eb459c5f1bb73e052a7c1ee1e0b8d9001bae802302104cd174",
-    "bytes": 49869936
-  },
-  "publishedAt": "2026-10-07T12:03:09.8783335+00:00"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "9b0a7ff747597d36913236d412ab3e5b962b3f4c",
+    "headCommit":  "9b0a7ff747597d36913236d412ab3e5b962b3f4c",
+    "version":  "v0.3.38",
+    "summary":  "v0.3.38：修复追加素材、素材库筛选与分析依赖",
+    "notes":  [
+                  "追加新素材时保留已有素材，并在异常中断后安全恢复有效分析结果",
+                  "修复素材库未分组文件夹有计数但点开为空的问题",
+                  "补齐中文 OCR、Embedding 与动态原生依赖，并继续使用与开发环境完全一致的大模型文件",
+                  "升级仅替换产品代码，保留项目、素材授权、模型、配置和用户数据"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.38-windows.zip",
+                    "sha256":  "3e334cae489f5132a38183f770bae735931d64f758e351205da1a4fd1cb93d2a",
+                    "bytes":  49871575
+                },
+    "publishedAt":  "2026-10-07T19:19:19.4398142+00:00"
 }
