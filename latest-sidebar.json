@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "scope": "sidebar",
-  "commit": "acbf1fd2ebed707c0c99ecc452ba3726084e5d6d",
-  "headCommit": "acbf1fd2ebed707c0c99ecc452ba3726084e5d6d",
-  "version": "v0.3.36",
-  "summary": "修复素材分析发行依赖，恢复 Embedding 与中文 OCR",
+  "commit": "4ad4d0349984d90227854e1450f45db7c8efa037",
+  "headCommit": "4ad4d0349984d90227854e1450f45db7c8efa037",
+  "version": "v0.3.37",
+  "summary": "修复素材库配置恢复和重复端口启动问题",
   "notes": [
-    "补齐 Transformers、ONNX Runtime、Tesseract.js 与简体中文 OCR 发行依赖",
-    "修复更新后自动重启与版本刷新，避免重复提示更新",
-    "保留现有项目、素材授权、模型、配置和用户数据"
+    "素材库配置损坏时自动从有效临时副本恢复，并清理残留写入文件",
+    "修复偏好设置重复保存和多进程并发写入，避免素材库再次不可用",
+    "侧栏升级后的完整安装继续复用默认 8787，并保留项目、授权、模型、配置和用户数据"
   ],
   "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.36-windows.zip",
-    "sha256": "9918729f9c4d84a33063c34172e4f6eccde280ae2d211ae8b378a6d4a1ebaed4",
-    "bytes": 49896107
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.37-windows.zip",
+    "sha256": "6f835dc81331c4eb459c5f1bb73e052a7c1ee1e0b8d9001bae802302104cd174",
+    "bytes": 49869936
   },
-  "publishedAt": "2026-10-07T10:27:24.7696633+00:00"
+  "publishedAt": "2026-10-07T12:03:09.8783335+00:00"
 }
