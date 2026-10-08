@@ -1,20 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "sidebar",
-    "commit":  "9b0a7ff747597d36913236d412ab3e5b962b3f4c",
-    "headCommit":  "9b0a7ff747597d36913236d412ab3e5b962b3f4c",
-    "version":  "v0.3.38",
-    "summary":  "v0.3.38：修复追加素材、素材库筛选与分析依赖",
-    "notes":  [
-                  "追加新素材时保留已有素材，并在异常中断后安全恢复有效分析结果",
-                  "修复素材库未分组文件夹有计数但点开为空的问题",
-                  "补齐中文 OCR、Embedding 与动态原生依赖，并继续使用与开发环境完全一致的大模型文件",
-                  "升级仅替换产品代码，保留项目、素材授权、模型、配置和用户数据"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.38-windows.zip",
-                    "sha256":  "3e334cae489f5132a38183f770bae735931d64f758e351205da1a4fd1cb93d2a",
-                    "bytes":  49871575
-                },
-    "publishedAt":  "2026-10-07T19:19:19.4398142+00:00"
+  "schema_version": 1,
+  "scope": "sidebar",
+  "commit": "9edc307dcc5dded724636495b5fdcd4484191ea4",
+  "headCommit": "9edc307dcc5dded724636495b5fdcd4484191ea4",
+  "version": "v0.3.39",
+  "summary": "修复追加素材分析与素材库状态",
+  "notes": [
+    "追加素材分析期间保留已完成素材，不再误报需要重新分析。",
+    "限制视觉模型重试时间并主动终止超时请求，避免长期停在 45%。",
+    "项目、授权、模型、配置与用户数据均保留。"
+  ],
+  "package": {
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.39-windows.zip",
+    "sha256": "8c7eea725d1936b5d196db140615a3d3dfc1050911380e098b4285c6b79bf7f9",
+    "bytes": 49871666
+  },
+  "publishedAt": "2026-10-08T03:17:17.8968476+00:00"
 }
