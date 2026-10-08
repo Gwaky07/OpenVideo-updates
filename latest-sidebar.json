@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "scope": "sidebar",
-  "commit": "9edc307dcc5dded724636495b5fdcd4484191ea4",
-  "headCommit": "9edc307dcc5dded724636495b5fdcd4484191ea4",
-  "version": "v0.3.39",
-  "summary": "修复追加素材分析与素材库状态",
+  "commit": "37237fe55a92e3fd31bca1eda52195543ad98a14",
+  "headCommit": "37237fe55a92e3fd31bca1eda52195543ad98a14",
+  "version": "v0.3.40",
+  "summary": "修复项目追加素材时素材库误显示全部重新分析的问题",
   "notes": [
-    "追加素材分析期间保留已完成素材，不再误报需要重新分析。",
-    "限制视觉模型重试时间并主动终止超时请求，避免长期停在 45%。",
-    "项目、授权、模型、配置与用户数据均保留。"
+    "只为本次新增或真实变化的素材显示分析进度",
+    "旧素材继续复用既有分析结果，不再被项目级任务整体标记",
+    "缩略图临时失败不再误判为素材变化；项目、授权、模型、配置和用户数据均保留"
   ],
   "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.39-windows.zip",
-    "sha256": "8c7eea725d1936b5d196db140615a3d3dfc1050911380e098b4285c6b79bf7f9",
-    "bytes": 49871666
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.40-windows.zip",
+    "sha256": "c0d0d21ee05e900fa54ccbb6cb073bc1efc0513e231a39d327a9c071f7a6e9bd",
+    "bytes": 49872083
   },
-  "publishedAt": "2026-10-08T03:17:17.8968476+00:00"
+  "publishedAt": "2026-10-08T06:06:35.7260430+00:00"
 }
