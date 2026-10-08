@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "scope": "sidebar",
-  "commit": "b4983171f43e7bc51fc08634b40c77b1e52d5214",
-  "headCommit": "b4983171f43e7bc51fc08634b40c77b1e52d5214",
+  "commit": "302e9b1e030b8f9c4603e72db5d56a7eab53ac54",
+  "headCommit": "302e9b1e030b8f9c4603e72db5d56a7eab53ac54",
   "version": "v0.3.41",
-  "summary": "修复失效素材记录无法重分析、无法移除以及误触发整项目分析的问题",
+  "summary": "修复失效素材清理、整项目误分析及旧版运行时升级兼容问题",
   "notes": [
     "失效素材会明确提示重新选择原视频或仅移除 OpenVideo 记录，不再回退为整项目重分析",
     "新增安全的素材记录移除入口；不会删除或改写原始视频，正在被分镜、时间线或项目引用时拒绝移除",
-    "补齐 OCR、Embedding、Whisper 与原生运行时校验；项目、授权、模型、配置和用户数据在更新时保留"
+    "从 v0.3.35 等旧版更新时会安全迁移已退役的 Whisper 测试程序；OCR、Embedding、Whisper、项目、授权、配置和用户数据均保留"
   ],
   "package": {
     "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.41-windows.zip",
-    "sha256": "a843e51a12e06f24f652432ad4322f1e13c2979af97e4f7e4036be5e011ac8bb",
-    "bytes": 49875124
+    "sha256": "9519a3f1af06f137e799a222ce04b9fb36db28bec58fb2349b4d7d68f6f56084",
+    "bytes": 49876127
   },
-  "publishedAt": "2026-10-08T10:02:33.8297685+00:00"
+  "publishedAt": "2026-10-08T10:36:23.6557810+00:00"
 }
