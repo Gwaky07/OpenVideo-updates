@@ -1,19 +1,17 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "ab54ef4a252f0c57572523d09d2538fbbb49a485",
-  "headCommit": "ab54ef4a252f0c57572523d09d2538fbbb49a485",
-  "version": "v0.3.43",
-  "summary": "修复 Windows 短暂文件占用导致更新回滚的问题",
-  "notes": [
-    "原子切换目录遇到短暂文件占用时会在有限时间内重试",
-    "包含 v0.3.42 的素材依赖成功误判与自动重启修复",
-    "素材记录移除只清理 OpenVideo 索引，不删除或改写原视频"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.43-windows.zip",
-    "sha256": "8b6ccdb2a111d778328f4332514fab3778b4acbd4876c70be88b9783e612aaf3",
-    "bytes": 49876492
-  },
-  "publishedAt": "2026-10-08T12:27:46.3852840+00:00"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "441ca7362d0cb50963c09983649987160fe68cf8",
+    "headCommit":  "441ca7362d0cb50963c09983649987160fe68cf8",
+    "version":  "v0.3.44",
+    "summary":  "优化素材库标签展示与快捷操作入口",
+    "notes":  [
+                  "每张素材卡最多展示四个标签；收藏素材、收藏片段和加入分类改为高辨识度彩色快捷按钮；保留已有项目、素材授权、模型配置、运行时和用户数据"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.44-windows.zip",
+                    "sha256":  "3b1c768c59ba795c662735d04fc86b506a049fcd657084ce5849f7c9a7938874",
+                    "bytes":  49877124
+                },
+    "publishedAt":  "2026-10-08T15:41:13.6723610+00:00"
 }
