@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "scope": "sidebar",
-  "commit": "8b91d12caf286e7d92f1a6affb89c7b85291fc5f",
-  "headCommit": "8b91d12caf286e7d92f1a6affb89c7b85291fc5f",
-  "version": "v0.3.42",
-  "summary": "修复素材依赖安装成功后自动重启被误判失败的问题",
+  "commit": "ab54ef4a252f0c57572523d09d2538fbbb49a485",
+  "headCommit": "ab54ef4a252f0c57572523d09d2538fbbb49a485",
+  "version": "v0.3.43",
+  "summary": "修复 Windows 短暂文件占用导致更新回滚的问题",
   "notes": [
-    "素材依赖安装成功后不再受旧的 PowerShell 进程退出码影响",
-    "更新下载完成后可继续自动启动工作台",
-    "包含 v0.3.41 的失效素材恢复、记录移除和旧 Whisper 测试程序迁移修复"
+    "原子切换目录遇到短暂文件占用时会在有限时间内重试",
+    "包含 v0.3.42 的素材依赖成功误判与自动重启修复",
+    "素材记录移除只清理 OpenVideo 索引，不删除或改写原视频"
   ],
   "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.42-windows.zip",
-    "sha256": "f7df011e507fa01209c4b6e1799e7d1e6f00e41b47dda8e7e0d5eb38c49e4d8f",
-    "bytes": 49876208
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.43-windows.zip",
+    "sha256": "8b6ccdb2a111d778328f4332514fab3778b4acbd4876c70be88b9783e612aaf3",
+    "bytes": 49876492
   },
-  "publishedAt": "2026-10-08T11:47:13.0486348+00:00"
+  "publishedAt": "2026-10-08T12:27:46.3852840+00:00"
 }
