@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "scope": "sidebar",
-  "commit": "302e9b1e030b8f9c4603e72db5d56a7eab53ac54",
-  "headCommit": "302e9b1e030b8f9c4603e72db5d56a7eab53ac54",
-  "version": "v0.3.41",
-  "summary": "修复失效素材清理、整项目误分析及旧版运行时升级兼容问题",
+  "commit": "8b91d12caf286e7d92f1a6affb89c7b85291fc5f",
+  "headCommit": "8b91d12caf286e7d92f1a6affb89c7b85291fc5f",
+  "version": "v0.3.42",
+  "summary": "修复素材依赖安装成功后自动重启被误判失败的问题",
   "notes": [
-    "失效素材会明确提示重新选择原视频或仅移除 OpenVideo 记录，不再回退为整项目重分析",
-    "新增安全的素材记录移除入口；不会删除或改写原始视频，正在被分镜、时间线或项目引用时拒绝移除",
-    "从 v0.3.35 等旧版更新时会安全迁移已退役的 Whisper 测试程序；OCR、Embedding、Whisper、项目、授权、配置和用户数据均保留"
+    "素材依赖安装成功后不再受旧的 PowerShell 进程退出码影响",
+    "更新下载完成后可继续自动启动工作台",
+    "包含 v0.3.41 的失效素材恢复、记录移除和旧 Whisper 测试程序迁移修复"
   ],
   "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.41-windows.zip",
-    "sha256": "9519a3f1af06f137e799a222ce04b9fb36db28bec58fb2349b4d7d68f6f56084",
-    "bytes": 49876127
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.42-windows.zip",
+    "sha256": "f7df011e507fa01209c4b6e1799e7d1e6f00e41b47dda8e7e0d5eb38c49e4d8f",
+    "bytes": 49876208
   },
-  "publishedAt": "2026-10-08T10:36:23.6557810+00:00"
+  "publishedAt": "2026-10-08T11:47:13.0486348+00:00"
 }
