@@ -6,12 +6,12 @@
     "version":  "v0.3.44",
     "summary":  "优化素材库标签展示与快捷操作入口",
     "notes":  [
-                  "每张素材卡最多展示四个标签；收藏素材、收藏片段和加入分类改为高辨识度彩色快捷按钮；保留已有项目、素材授权、模型配置、运行时和用户数据"
+                  "素材卡展示四个标签，收藏、片段和分类按钮更加醒目"
               ],
     "package":  {
                     "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.44-windows.zip",
                     "sha256":  "3b1c768c59ba795c662735d04fc86b506a049fcd657084ce5849f7c9a7938874",
                     "bytes":  49877124
                 },
-    "publishedAt":  "2026-10-08T15:41:13.6723610+00:00"
+    "publishedAt":  "2026-10-08T15:45:36.7705244+00:00"
 }
