@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "scope": "frontend",
-  "commit": "9b0a7ff747597d36913236d412ab3e5b962b3f4c",
-  "version": "9b0a7ff74759",
+  "commit": "9edc307dcc5dded724636495b5fdcd4484191ea4",
+  "version": "9edc307dcc5d",
   "summary": "有新的界面更新",
   "notes": [
     "推送到主仓库后的界面更新"
   ],
   "package": {
     "url": "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/frontend.zip",
-    "sha256": "1e63857855d2416dc4d0e731fb312310711ead88d208f99ce9491607197f8610",
+    "sha256": "02f5bfecb2f0a1483a6ebbc031472539b9f55f59d03068ccbca500fd46fade3b",
     "bytes": 665107
   }
 }
