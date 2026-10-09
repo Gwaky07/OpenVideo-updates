@@ -13,9 +13,9 @@
                   "Projects, local settings, runtime, models and Catalog are preserved"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.45-windows.zip",
+                    "url":  "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.45/OpenVideo-sidebar-v0.3.45-windows.zip",
                     "sha256":  "38941457e6e81646518a81a0425c77a7b36ff0e7ed8f61e792c06de2bb5e169d",
                     "bytes":  49879176
                 },
-    "publishedAt":  "2026-10-09T07:56:24.5302814+00:00"
+    "publishedAt":  "2026-10-09T08:19:22.7495035+00:00"
 }
