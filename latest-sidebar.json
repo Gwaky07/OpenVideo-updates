@@ -1,17 +1,21 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "441ca7362d0cb50963c09983649987160fe68cf8",
-    "headCommit":  "441ca7362d0cb50963c09983649987160fe68cf8",
-    "version":  "v0.3.44",
-    "summary":  "优化素材库标签展示与快捷操作入口",
+    "commit":  "f5d77993",
+    "headCommit":  "f5d77993",
+    "version":  "v0.3.45",
+    "summary":  "Sidebar product code update v0.3.45 (no runtime; first-time installs still need the full package via private channel)",
     "notes":  [
-                  "素材卡展示四个标签，收藏、片段和分类按钮更加醒目"
+                  "Source checkout now prefers the Gateway source over a stale dist/bundle.mjs and forces a synchronous build, so the first Web and Gateway share the same commit",
+                  "Windows launcher in developer checkouts no longer keeps an older Gateway process alive after the source has been rebuilt",
+                  "Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved on the colleague machine",
+                  "First-time installs continue to use the full OpenVideo-v0.3.45-windows.zip shared via private channel",
+                  "Projects, local settings, runtime, models and Catalog are preserved"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.44-windows.zip",
-                    "sha256":  "3b1c768c59ba795c662735d04fc86b506a049fcd657084ce5849f7c9a7938874",
-                    "bytes":  49877124
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.45-windows.zip",
+                    "sha256":  "38941457e6e81646518a81a0425c77a7b36ff0e7ed8f61e792c06de2bb5e169d",
+                    "bytes":  49879176
                 },
-    "publishedAt":  "2026-10-08T15:45:36.7705244+00:00"
+    "publishedAt":  "2026-10-09T07:56:24.5302814+00:00"
 }
