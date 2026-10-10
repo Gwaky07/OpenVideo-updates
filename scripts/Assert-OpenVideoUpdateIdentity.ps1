@@ -46,8 +46,17 @@ if ($scope -eq 'sidebar') {
         if ($raw.TrimStart([char]0xFEFF) -cne $baselineRaw) {
             $baseline = $baselineRaw | ConvertFrom-Json
             $previousVersion = [string](Read-Field $baseline 'version')
-            if ($version -cmatch '^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$' -and [version]$version.Substring(1) -le [version]$previousVersion.Substring(1)) { $errors.Add('sidebar version must increase from baseline') }
-            $requiresRevision = $true
+            # 地址恢复不重新发行：仅 package.url 可变，其余身份、摘要和元数据必须保持。
+            $candidateComparable = $raw.TrimStart([char]0xFEFF) | ConvertFrom-Json
+            $baselineComparable = $baselineRaw | ConvertFrom-Json
+            $candidateComparable.package.url = ''
+            $baselineComparable.package.url = ''
+            $addressOnly = ($candidateComparable | ConvertTo-Json -Depth 20 -Compress) -ceq ($baselineComparable | ConvertTo-Json -Depth 20 -Compress)
+            if ($addressOnly -and $manifest.package.url -cne "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-$version-windows.zip") { $errors.Add('address recovery must target the exact raw/main package URL') }
+            if (-not $addressOnly) {
+                if ($version -cmatch '^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$' -and [version]$version.Substring(1) -le [version]$previousVersion.Substring(1)) { $errors.Add('sidebar version must increase from baseline') }
+                $requiresRevision = $true
+            }
         }
     }
 }
