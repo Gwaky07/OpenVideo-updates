@@ -1,0 +1,2 @@
+OpenVideo-sidebar-*-windows.zip -filter -diff -merge -text
+frontend.zip -filter -diff -merge -text

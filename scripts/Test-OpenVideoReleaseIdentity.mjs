@@ -17,7 +17,7 @@ const temp = mkdtempSync(join(work, 'case-'))
 const manifestPath = join(temp, 'latest-sidebar.json')
 const commit = 'a'.repeat(40)
 const version = 'v0.3.99'
-const valid = () => ({ schema_version: 1, scope: 'sidebar', commit, headCommit: commit, version, package: { url: `https://github.com/Gwaky07/OpenVideo-updates/releases/download/${version}/OpenVideo-sidebar-${version}-windows.zip`, sha256: 'b'.repeat(64), bytes: 100 } })
+const valid = () => ({ schema_version: 1, scope: 'sidebar', commit, headCommit: commit, version, package: { url: `https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-${version}-windows.zip`, sha256: 'b'.repeat(64), bytes: 100 } })
 const check = (manifest, args = []) => {
   writeFileSync(manifestPath, JSON.stringify(manifest))
   return spawnSync(shell, ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', join(root, 'scripts', 'Assert-OpenVideoLatestJson.ps1'), '-LatestJsonPath', manifestPath, ...args], { encoding: 'utf8', env: childEnv })
@@ -27,6 +27,7 @@ test('完整 SHA 清单通过，旧 frontend 通道保持兼容', () => {
   let result = check(valid())
   assert.equal(result.status, 0, result.stderr)
   const legacy = { ...valid(), scope: 'frontend', version: commit.slice(0, 12) }
+  legacy.package.url = 'https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/frontend.zip'
   delete legacy.headCommit
   result = check(legacy)
   assert.equal(result.status, 0, result.stderr)
@@ -47,6 +48,11 @@ for (const [name, change] of [
   ['错误仓库地址', m => { m.package.url = m.package.url.replace('/OpenVideo-updates/', '/Other/') }],
   ['HTTP 地址', m => { m.package.url = m.package.url.replace('https:', 'http:') }],
   ['URL 版本不一致', m => { m.package.url = m.package.url.replaceAll(version, 'v0.3.1') }],
+  ['GitHub Release 入口', m => { m.package.url = `https://github.com/Gwaky07/OpenVideo-updates/releases/download/${version}/OpenVideo-sidebar-${version}-windows.zip` }],
+  ['LFS media 入口', m => { m.package.url = m.package.url.replace('raw.githubusercontent.com/', 'media.githubusercontent.com/media/') }],
+  ['非 main 地址', m => { m.package.url = m.package.url.replace('/main/', '/other/') }],
+  ['临时 URL 参数', m => { m.package.url += '?token=temp' }],
+  ['普通 Git 超限', m => { m.package.bytes = 104857600 }],
 ]) {
   test(`拒绝${name}`, () => {
     const m = valid(); change(m)

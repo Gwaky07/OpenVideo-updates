@@ -65,11 +65,16 @@ if ($ExpectedVersion -and $version -cne $ExpectedVersion) { $errors.Add('version
 if ($digest -cnotmatch '^[a-f0-9]{64}$') { $errors.Add('package.sha256 must be a 64-char lowercase digest') }
 if ($null -eq $bytes -or $bytes -is [string] -or $bytes -is [bool] -or $bytes -isnot [ValueType] -or $bytes -le 0 -or [math]::Floor([double]$bytes) -ne $bytes) { $errors.Add('package.bytes must be a positive integer') }
 if ($scope -in @('sidebar', 'frontend') -and $bytes -ge 524288000) { $errors.Add('public package must be smaller than 500 MiB') }
+if ($scope -in @('sidebar', 'frontend') -and $bytes -ge 104857600) { $errors.Add('direct Git package must be smaller than 100 MiB') }
 try {
     $uri = [Uri]([string](Read-Field $pack 'url'))
     $prefix = if ($uri.Host -eq 'media.githubusercontent.com') { '/media/Gwaky07/OpenVideo-updates/' } else { '/Gwaky07/OpenVideo-updates/' }
     if ($uri.Scheme -ne 'https' -or $uri.Host -notin @('github.com', 'raw.githubusercontent.com', 'media.githubusercontent.com', 'objects.githubusercontent.com', 'user-images.githubusercontent.com') -or -not $uri.AbsolutePath.StartsWith($prefix, [StringComparison]::Ordinal) -or $uri.UserInfo -or -not $uri.IsDefaultPort) { throw 'invalid url' }
     if ($scope -eq 'sidebar' -and [Uri]::UnescapeDataString($uri.Segments[-1]) -cne "OpenVideo-sidebar-$version-windows.zip") { $errors.Add('sidebar URL filename does not match version') }
+    if ($scope -in @('sidebar', 'frontend')) {
+        $filename = if ($scope -eq 'sidebar') { "OpenVideo-sidebar-$version-windows.zip" } else { 'frontend.zip' }
+        if ([string](Read-Field $pack 'url') -cne "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/$filename") { $errors.Add('public updates must use the exact raw/main direct URL; Release and LFS are forbidden') }
+    }
 } catch { $errors.Add('package.url must be an approved HTTPS update URL') }
 if ($errors.Count) { throw "OPENVIDEO_LATEST_JSON_SCHEMA_INVALID: $($errors -join '; ')" }
 if ($PackagePath) {
