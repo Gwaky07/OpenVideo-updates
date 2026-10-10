@@ -13,3 +13,6 @@
 - 新侧栏清单使用无前导零的稳定版本号，必须严格高于基线版本，包内 `identity_revision=2` 且配置的两个提交号与清单一致；历史兼容只适用于基线清单原样保留。门禁运行基线受信任脚本，不执行候选 PR 脚本。
 - 新建或修改 Markdown 正文使用中文；代码、命令、路径、字段名和必要专有名词可保留原文。
 - 普通 Git 文件使用 `raw.githubusercontent.com` 下载；只有实际使用 LFS 的文件才能用 `media.githubusercontent.com`。不得只依据旧注释选择下载域名，门禁必须下载实际字节并核对摘要。
+- **公开更新直链铁律（2026-10-10 用户明确要求）**：公开更新包仅作为普通 Git 文件进入本仓库 `main`，唯一入口为 `https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/<包文件名>`。禁止创建或上传 GitHub Release 更新资产、使用 `/releases/download/`、LFS、media 地址、临时签名地址或跳转入口；更换电脑也不得改渠道。单文件小于 100 MiB；超限应优化小包或经确认走私人渠道，完整包不得公开。
+- 旧客户端拒绝 302；验证必须禁止跟随跳转，并核对 HTTP 200、SHA-256、bytes 和包内身份。浏览器或默认自动跳转下载成功不等于产品更新可用。
+- 同包地址恢复只允许修改 `package.url` 为精确直链；版本、commit、headCommit、摘要、bytes、说明和发布时间全部保持，ZIP 必须原字节。其它改变仍必须递增版本并符合新身份格式，禁止借恢复例外换包。历史 Release 不再用于更新，删除须另获授权。

@@ -70,6 +70,20 @@ test('既有清单原样兼容，新清单必须严格递增', () => {
   changed.version = 'v0.3.100'; changed.package.url = valid().package.url.replaceAll(version, changed.version)
   assert.equal(check(changed, ['-BaselineLatestJsonPath', baseline]).status, 0)
 })
+test('地址恢复仅允许改变 URL，禁止同时更换包或元数据', () => {
+  const baseline = join(temp, 'address-baseline.json')
+  const old = valid()
+  old.package.url = `https://github.com/Gwaky07/OpenVideo-updates/releases/download/${version}/OpenVideo-sidebar-${version}-windows.zip`
+  writeFileSync(baseline, JSON.stringify(old))
+  const m = valid()
+  m.package.url = `https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-${version}-windows.zip`
+  const args = ['-BaselineLatestJsonPath', baseline]
+  assert.equal(check(m, args).status, 0)
+  for (const mutate of [v => { v.commit = v.headCommit = 'c'.repeat(40) }, v => { v.package.sha256 = 'c'.repeat(64) }, v => { v.package.bytes++ }, v => { v.summary = 'changed' }]) {
+    const changed = structuredClone(m); mutate(changed)
+    assert.notEqual(check(changed, args).status, 0)
+  }
+})
 test('检查 ZIP 的真实身份、配置版本、摘要和字节数', () => {
   const stage = join(temp, `OpenVideo-${version}`)
   mkdirSync(join(stage, 'config'), { recursive: true })
