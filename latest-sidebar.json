@@ -1,19 +1,17 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "72f0e6168d41b81e62c966003e665e08ed642425",
-  "headCommit": "72f0e6168d41b81e62c966003e665e08ed642425",
-  "version": "v0.3.46",
-  "summary": "OpenVideo 产品代码更新 v0.3.46（不含运行时；首次安装仍通过私人渠道获取完整包）",
-  "notes": [
-    "将大型运行数据默认放到程序旁边的 OpenVideoData，减少 C 盘长期占用",
-    "保留本机 runtime、项目、素材授权、模型设置和 Catalog",
-    "修复并验证 v0.3.46 外发包与侧栏更新链路"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.46-windows.zip",
-    "sha256": "0786293dcc5493c3e55363c6a15a57097cae9ffd4734d56f807be0dc764f8d8f",
-    "bytes": 49878658
-  },
-  "publishedAt": "2026-10-10T06:12:38.6099013Z"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "9b3b743dbae3f7007b097396eeca315648e461f6",
+    "headCommit":  "9b3b743dbae3f7007b097396eeca315648e461f6",
+    "version":  "v0.3.47",
+    "summary":  "修复工作台空闲重绘与后台选择器窗口干扰",
+    "notes":  [
+                  "侧栏模型空闲停止重绘，失焦或隐藏时暂停；后台选择器预热不显示或激活窗口；更新前端、后台和启动器，保留本机运行时及用户数据；下载使用公开仓库直链"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.47-windows.zip",
+                    "sha256":  "c9813a14d869d3e914fb81a0d1b4fcadee41868bb0509cb1d7911ce50a2016a0",
+                    "bytes":  49967261
+                },
+    "publishedAt":  "2026-10-10T11:32:50.0608429+00:00"
 }
