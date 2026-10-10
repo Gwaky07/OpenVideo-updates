@@ -1,17 +1,19 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "9b3b743dbae3f7007b097396eeca315648e461f6",
-    "headCommit":  "9b3b743dbae3f7007b097396eeca315648e461f6",
-    "version":  "v0.3.47",
-    "summary":  "修复工作台空闲重绘与后台选择器窗口干扰",
+    "commit":  "e34962a99f95ce58b6b87f1d932e0961290d8d93",
+    "headCommit":  "e34962a99f95ce58b6b87f1d932e0961290d8d93",
+    "version":  "v0.3.48",
+    "summary":  "OpenVideo product code update v0.3.48 (Jianying local catalog fallback and reimport fix)",
     "notes":  [
-                  "侧栏模型空闲停止重绘，失焦或隐藏时暂停；后台选择器预热不显示或激活窗口；更新前端、后台和启动器，保留本机运行时及用户数据；下载使用公开仓库直链"
+                  "Automatic packaging falls back to each computer local Jianying resources when a private snapshot is absent",
+                  "Settings provides a reimport action for the local packaging catalog",
+                  "Existing runtime, projects, authorizations, model settings and Catalog are preserved"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.47-windows.zip",
-                    "sha256":  "c9813a14d869d3e914fb81a0d1b4fcadee41868bb0509cb1d7911ce50a2016a0",
-                    "bytes":  49967261
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.48-windows.zip",
+                    "sha256":  "6b91dfa72abc33540ff9f8cc2d40713ab7cd32bbaae82160838b554d27db7f1e",
+                    "bytes":  49967262
                 },
-    "publishedAt":  "2026-10-10T11:32:50.0608429+00:00"
+    "publishedAt":  "2026-10-10T17:32:36.6124478+00:00"
 }
