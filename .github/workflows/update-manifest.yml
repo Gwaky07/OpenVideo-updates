@@ -59,10 +59,18 @@ jobs:
             New-Item -ItemType Directory -Force -Path .openvideo-work/downloads | Out-Null
             $zip = Join-Path $PWD ".openvideo-work/downloads/$path.zip"
             try {
-              Invoke-WebRequest -Uri $url -OutFile $zip
+              $response = Invoke-WebRequest -Uri $url -OutFile $zip -MaximumRedirection 0 -PassThru
+              if ($response.StatusCode -ne 200 -or $response.Headers.Location) { throw 'OPENVIDEO_UPDATE_DIRECT_DOWNLOAD_REQUIRED' }
               ./trusted/scripts/Assert-OpenVideoLatestJson.ps1 -LatestJsonPath $manifest -AllowedScopes sidebar,frontend -PackagePath $zip -BaselineLatestJsonPath $baseline
             } finally { Remove-Item -LiteralPath $zip -Force -ErrorAction SilentlyContinue }
           }
+      - name: 使用不跟随跳转的旧客户端请求验证
+        shell: pwsh
+        env:
+          OPENVIDEO_CANDIDATE_REF: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          node trusted/scripts/Test-OpenVideoDirectDownload.mjs candidate/latest-sidebar.json
+          node trusted/scripts/Test-OpenVideoDirectDownload.mjs candidate/latest.json
       - name: 发布必需检查结果
         if: always()
         shell: pwsh

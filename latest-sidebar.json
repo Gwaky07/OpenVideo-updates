@@ -11,7 +11,7 @@
     "修复并验证 v0.3.46 外发包与侧栏更新链路"
   ],
   "package": {
-    "url": "https://github.com/Gwaky07/OpenVideo-updates/releases/download/v0.3.46/OpenVideo-sidebar-v0.3.46-windows.zip",
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.46-windows.zip",
     "sha256": "0786293dcc5493c3e55363c6a15a57097cae9ffd4734d56f807be0dc764f8d8f",
     "bytes": 49878658
   },
