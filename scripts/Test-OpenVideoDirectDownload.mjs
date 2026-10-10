@@ -16,22 +16,38 @@ const url = candidate ? manifest.package.url.replace('/main/', `/${candidate}/`)
 await new Promise((resolve, reject) => {
   let request
   let stream
-  const timeout = setTimeout(() => { stream?.destroy(); request?.destroy(); reject(new Error('DIRECT_DOWNLOAD_TIMEOUT')) }, 180000)
-  const fail = error => { clearTimeout(timeout); stream?.destroy(); request?.destroy(); reject(error) }
+  let settled = false
+  const fail = error => {
+    if (settled) return
+    settled = true
+    clearTimeout(timeout)
+    reject(error)
+    stream?.destroy()
+    request?.destroy()
+  }
+  // 与产品下载器相同的 15 分钟上限；慢网络不能被 3 分钟诊断限额误判。
+  const timeout = setTimeout(() => fail(new Error('DIRECT_DOWNLOAD_TIMEOUT')), 15 * 60000)
   request = https.get(url, { headers: { accept: 'application/octet-stream' } }, response => {
     stream = response
     if (response.statusCode !== 200 || response.headers.location) return fail(new Error(`DIRECT_DOWNLOAD_HTTP_${response.statusCode}`))
     console.log('DIRECT_DOWNLOAD_HTTP_200_NO_REDIRECT')
     const hash = createHash('sha256')
     let bytes = 0
+    let nextReport = 4 * 1024 * 1024
     response.on('data', chunk => {
       bytes += chunk.length
       if (bytes > manifest.package.bytes) return fail(new Error('DIRECT_DOWNLOAD_OVERFLOW'))
       hash.update(chunk)
+      if (bytes >= nextReport) {
+        console.log(`DIRECT_DOWNLOAD_PROGRESS bytes=${bytes} total=${manifest.package.bytes}`)
+        nextReport = bytes + 4 * 1024 * 1024
+      }
     })
     response.on('error', fail)
     response.on('aborted', () => fail(new Error('DIRECT_DOWNLOAD_ABORTED')))
     response.on('end', () => {
+      if (settled) return
+      settled = true
       clearTimeout(timeout)
       try {
         assert.equal(bytes, manifest.package.bytes)
