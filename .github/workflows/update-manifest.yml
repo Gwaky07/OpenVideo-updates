@@ -1,0 +1,73 @@
+name: 更新源门禁
+on:
+  push:
+    branches: [main]
+  pull_request_target:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  statuses: write
+jobs:
+  validate:
+    name: 受信任更新源检查
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      CANDIDATE_REF: ${{ github.event.pull_request.head.sha || github.sha }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: 标记待校验
+        shell: pwsh
+        run: gh api --method POST "repos/${{ github.repository }}/statuses/$env:CANDIDATE_REF" -f state=pending -f 'context=更新清单与包校验'
+      # 只执行基线校验代码；候选 PR 中的脚本不能自行宣布通过。
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          path: trusted
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            latest-sidebar.json
+            latest.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          path: candidate
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /latest.json
+            /latest-sidebar.json
+      - name: 验证校验器的负向案例
+        shell: pwsh
+        run: node --test trusted/scripts/Test-OpenVideoReleaseIdentity.mjs
+      - name: 验证当前清单和公开下载包
+        shell: pwsh
+        run: |
+          foreach ($path in @('latest-sidebar.json', 'latest.json')) {
+            $manifest = Join-Path $PWD "candidate/$path"
+            $baseline = if ('${{ github.event_name }}' -eq 'pull_request_target') { Join-Path $PWD "trusted/$path" } else { '' }
+            ./trusted/scripts/Assert-OpenVideoLatestJson.ps1 -LatestJsonPath $manifest -AllowedScopes sidebar,frontend -BaselineLatestJsonPath $baseline
+            $m = Get-Content -LiteralPath $manifest -Raw | ConvertFrom-Json
+            $url = [string]$m.package.url
+            if ($url -match '^https://(raw|media)\.githubusercontent\.com/') {
+              $url = $url.Replace('/main/', "/$env:CANDIDATE_REF/")
+            }
+            New-Item -ItemType Directory -Force -Path .openvideo-work/downloads | Out-Null
+            $zip = Join-Path $PWD ".openvideo-work/downloads/$path.zip"
+            try {
+              Invoke-WebRequest -Uri $url -OutFile $zip
+              ./trusted/scripts/Assert-OpenVideoLatestJson.ps1 -LatestJsonPath $manifest -AllowedScopes sidebar,frontend -PackagePath $zip -BaselineLatestJsonPath $baseline
+            } finally { Remove-Item -LiteralPath $zip -Force -ErrorAction SilentlyContinue }
+          }
+      - name: 发布必需检查结果
+        if: always()
+        shell: pwsh
+        env:
+          VALIDATION_STATUS: ${{ job.status }}
+        run: |
+          $state = if ($env:VALIDATION_STATUS -eq 'success') { 'success' } else { 'failure' }
+          gh api --method POST "repos/${{ github.repository }}/statuses/$env:CANDIDATE_REF" -f "state=$state" -f 'context=更新清单与包校验' -f 'target_url=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
