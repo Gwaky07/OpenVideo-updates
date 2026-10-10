@@ -8,7 +8,7 @@
     "推送到主仓库后的界面更新"
   ],
   "package": {
-    "url": "https://media.githubusercontent.com/media/Gwaky07/OpenVideo-updates/main/frontend.zip",
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/frontend.zip",
     "sha256": "abb2903a48b1220cf0b3fbf71a84a67231ed8962c77537df9edfa0a3bbc701c6",
     "bytes": 666813
   }
