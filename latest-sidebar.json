@@ -1,19 +1,19 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "e34962a99f95ce58b6b87f1d932e0961290d8d93",
-    "headCommit":  "e34962a99f95ce58b6b87f1d932e0961290d8d93",
-    "version":  "v0.3.48",
-    "summary":  "OpenVideo product code update v0.3.48 (Jianying local catalog fallback and reimport fix)",
+    "commit":  "8d4b50609d5223b54b65591373a614ef057fb3b5",
+    "headCommit":  "8d4b50609d5223b54b65591373a614ef057fb3b5",
+    "version":  "v0.3.49",
+    "summary":  "OpenVideo product code update v0.3.49 (Windows window flicker and focus-stealing fix)",
     "notes":  [
-                  "Automatic packaging falls back to each computer local Jianying resources when a private snapshot is absent",
-                  "Settings provides a reimport action for the local packaging catalog",
+                  "Native file picker prewarming no longer shows or activates a hidden topmost window before the user requests a picker",
+                  "Workbench decorative rendering pauses while idle, unfocused, hidden or offscreen",
                   "Existing runtime, projects, authorizations, model settings and Catalog are preserved"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.48-windows.zip",
-                    "sha256":  "6b91dfa72abc33540ff9f8cc2d40713ab7cd32bbaae82160838b554d27db7f1e",
-                    "bytes":  49967262
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.49-windows.zip",
+                    "sha256":  "6d45ebed565f52e8a5c313d337f04522e6a2f7764874da703bcc801b4852f9c3",
+                    "bytes":  49967971
                 },
-    "publishedAt":  "2026-10-10T17:32:36.6124478+00:00"
+    "publishedAt":  "2026-10-12T03:11:39.9847404+00:00"
 }
