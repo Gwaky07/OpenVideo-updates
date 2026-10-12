@@ -1,19 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "sidebar",
-    "commit":  "39e45f5c54a9683e02ba50d4e9bdb6cbccc73180",
-    "headCommit":  "39e45f5c54a9683e02ba50d4e9bdb6cbccc73180",
-    "version":  "v0.3.50",
-    "summary":  "修复 Windows ACL 收尾导致素材分析依赖被误判变化的问题",
-    "notes":  [
-                  "Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved on the colleague machine",
-                  "First-time installs continue to use the full OpenVideo-v0.3.50-windows.zip shared via private channel",
-                  "Projects, local settings, runtime, models and Catalog are preserved"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.50-windows.zip",
-                    "sha256":  "474695769e44dac527a88d4953b14708bcde543533adbe0e12171381083b09b8",
-                    "bytes":  50163518
-                },
-    "publishedAt":  "2026-10-12T12:46:02.6575981+00:00"
+  "schema_version": 1,
+  "scope": "sidebar",
+  "commit": "511f1577c8fff1c5934e914030ed906b5d5ecfd0",
+  "headCommit": "511f1577c8fff1c5934e914030ed906b5d5ecfd0",
+  "version": "v0.3.51",
+  "summary": "Sidebar product code update v0.3.51 (no runtime; first-time installs still need the full package via private channel)",
+  "notes": [
+    "Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved on the colleague machine",
+    "First-time installs continue to use the full OpenVideo-v0.3.51-windows.zip shared via private channel",
+    "Projects, local settings, runtime, models and Catalog are preserved"
+  ],
+  "package": {
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.51-windows.zip",
+    "sha256": "37ef2377766c687f876f9c4aa903874c1e567ba0e0cfd6c57780640f70a7fdab",
+    "bytes": 50195805
+  },
+  "publishedAt": "2026-10-12T13:57:05.8751893+00:00"
 }
