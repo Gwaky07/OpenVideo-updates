@@ -1,19 +1,19 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "8d4b50609d5223b54b65591373a614ef057fb3b5",
-    "headCommit":  "8d4b50609d5223b54b65591373a614ef057fb3b5",
-    "version":  "v0.3.49",
-    "summary":  "OpenVideo product code update v0.3.49 (Windows window flicker and focus-stealing fix)",
+    "commit":  "39e45f5c54a9683e02ba50d4e9bdb6cbccc73180",
+    "headCommit":  "39e45f5c54a9683e02ba50d4e9bdb6cbccc73180",
+    "version":  "v0.3.50",
+    "summary":  "修复 Windows ACL 收尾导致素材分析依赖被误判变化的问题",
     "notes":  [
-                  "Native file picker prewarming no longer shows or activates a hidden topmost window before the user requests a picker",
-                  "Workbench decorative rendering pauses while idle, unfocused, hidden or offscreen",
-                  "Existing runtime, projects, authorizations, model settings and Catalog are preserved"
+                  "Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved on the colleague machine",
+                  "First-time installs continue to use the full OpenVideo-v0.3.50-windows.zip shared via private channel",
+                  "Projects, local settings, runtime, models and Catalog are preserved"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.49-windows.zip",
-                    "sha256":  "6d45ebed565f52e8a5c313d337f04522e6a2f7764874da703bcc801b4852f9c3",
-                    "bytes":  49967971
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.50-windows.zip",
+                    "sha256":  "474695769e44dac527a88d4953b14708bcde543533adbe0e12171381083b09b8",
+                    "bytes":  50163518
                 },
-    "publishedAt":  "2026-10-12T03:11:39.9847404+00:00"
+    "publishedAt":  "2026-10-12T12:46:02.6575981+00:00"
 }
