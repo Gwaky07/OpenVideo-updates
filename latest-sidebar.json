@@ -1,19 +1,19 @@
 {
-  "schema_version": 1,
-  "scope": "sidebar",
-  "commit": "5dd3081fc8a4757a1c95acb27cd4c05eae3bf5bc",
-  "headCommit": "5dd3081fc8a4757a1c95acb27cd4c05eae3bf5bc",
-  "version": "v0.3.53",
-  "summary": "修复侧栏小电视延迟显示",
-  "notes": [
-    "侧栏小电视随工作台界面立即显示，3D 画布在后台启动。",
-    "本次发布 v0.3.53 侧栏产品代码更新，不包含完整运行时大包。",
-    "项目、本机设置与运行时数据会保留。"
-  ],
-  "package": {
-    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.53-windows.zip",
-    "sha256": "a5e6a67db85e605107b2ef7eb2d9bae2a1ef1bd637e1666fed17d5f463f7bb0d",
-    "bytes": 65008461
-  },
-  "publishedAt": "2026-10-20T09:21:38.5219792+00:00"
+    "schema_version":  1,
+    "scope":  "sidebar",
+    "commit":  "5a02b13aa9e35fc520a337455ee3850c6f8ccd71",
+    "headCommit":  "5a02b13aa9e35fc520a337455ee3850c6f8ccd71",
+    "version":  "v0.3.54",
+    "summary":  "Sidebar product code update v0.3.54 (no runtime; first-time installs still need the full package via private channel)",
+    "notes":  [
+                  "Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved on the colleague machine",
+                  "First-time installs continue to use the full OpenVideo-v0.3.54-windows.zip shared via private channel",
+                  "Projects, local settings, runtime, models and Catalog are preserved"
+              ],
+    "package":  {
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.54-windows.zip",
+                    "sha256":  "ac68f2f8b821f12797a34cd23ce14007be88e7e08eb97b5a5d3fee0aa3aa89fe",
+                    "bytes":  65008424
+                },
+    "publishedAt":  "2026-10-20T12:58:05.4805881+00:00"
 }
