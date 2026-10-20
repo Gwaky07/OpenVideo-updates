@@ -1,17 +1,19 @@
 {
-    "schema_version":  1,
-    "scope":  "sidebar",
-    "commit":  "2f755343f81b1b9c48eeca52be5cc766488c5e6c",
-    "headCommit":  "2f755343f81b1b9c48eeca52be5cc766488c5e6c",
-    "version":  "v0.3.52",
-    "summary":  "修复 Windows ACL 收尾引起的素材分析依赖误判，并发布 v0.3.52 产品代码更新。",
-    "notes":  [
-                  "仅发布 65 MB 侧栏更新小包，不包含首次安装用的完整运行时大包。"
-              ],
-    "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.52-windows.zip",
-                    "sha256":  "af55ff9025f33e8b282a8006bb4d5a95cf28c6e800996b89f11c01ca4be3831a",
-                    "bytes":  65005929
-                },
-    "publishedAt":  "2026-10-14T07:49:27.1549886+00:00"
+  "schema_version": 1,
+  "scope": "sidebar",
+  "commit": "5dd3081fc8a4757a1c95acb27cd4c05eae3bf5bc",
+  "headCommit": "5dd3081fc8a4757a1c95acb27cd4c05eae3bf5bc",
+  "version": "v0.3.53",
+  "summary": "修复侧栏小电视延迟显示",
+  "notes": [
+    "侧栏小电视随工作台界面立即显示，3D 画布在后台启动。",
+    "本次发布 v0.3.53 侧栏产品代码更新，不包含完整运行时大包。",
+    "项目、本机设置与运行时数据会保留。"
+  ],
+  "package": {
+    "url": "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.53-windows.zip",
+    "sha256": "a5e6a67db85e605107b2ef7eb2d9bae2a1ef1bd637e1666fed17d5f463f7bb0d",
+    "bytes": 65008461
+  },
+  "publishedAt": "2026-10-20T09:21:38.5219792+00:00"
 }
