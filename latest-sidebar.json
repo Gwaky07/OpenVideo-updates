@@ -1,19 +1,17 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "5a02b13aa9e35fc520a337455ee3850c6f8ccd71",
-    "headCommit":  "5a02b13aa9e35fc520a337455ee3850c6f8ccd71",
-    "version":  "v0.3.54",
-    "summary":  "Sidebar product code update v0.3.54 (no runtime; first-time installs still need the full package via private channel)",
+    "commit":  "5b6127ee7b553c0d7d6ec09187461c296292cee6",
+    "headCommit":  "5b6127ee7b553c0d7d6ec09187461c296292cee6",
+    "version":  "v0.3.55",
+    "summary":  "素材库播放与分析等待修复 v0.3.55",
     "notes":  [
-                  "Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved on the colleague machine",
-                  "First-time installs continue to use the full OpenVideo-v0.3.54-windows.zip shared via private channel",
-                  "Projects, local settings, runtime, models and Catalog are preserved"
+                  "\u0027修复素材库详情页视频卡在封面不播放的问题\u0027,\u0027保留封面等待态并在媒体资源可用后恢复播放\u0027,\u0027修复分析等待、媒体预览和项目工作台的恢复路径\u0027"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.54-windows.zip",
-                    "sha256":  "ac68f2f8b821f12797a34cd23ce14007be88e7e08eb97b5a5d3fee0aa3aa89fe",
-                    "bytes":  65008424
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.55-windows.zip",
+                    "sha256":  "23916b9288c08cb3292b997a9ce06e7e746d4ec4442bcc9e0003392e7af3821d",
+                    "bytes":  65019615
                 },
-    "publishedAt":  "2026-10-20T12:58:05.4805881+00:00"
+    "publishedAt":  "2026-10-26T09:20:15.4832886+00:00"
 }
