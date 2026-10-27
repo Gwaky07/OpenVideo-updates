@@ -9,6 +9,7 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
+. (Join-Path $PSScriptRoot 'OpenVideoReleaseNotes.ps1')
 function Read-Field($Object, [string]$Name) {
     if ($null -ne $Object -and $null -ne $Object.PSObject.Properties[$Name]) { return $Object.$Name }
     return $null
@@ -59,6 +60,18 @@ if ($scope -eq 'sidebar') {
             }
         }
     }
+}
+# REL-055：新发行（期望版本已知，或相对基线发生变化）必须携带合格的中文说明。
+# 已发布的清单在不带期望版本与基线时保持原样兼容，避免历史说明卡住后续发布。
+if ($scope -eq 'sidebar' -and ($requiresRevision -or $ExpectedVersion)) {
+    # 直接从属性取值：经过 Read-Field 返回会把单元素数组展开成字符串。
+    $summaryValue = $null
+    $summaryProperty = $manifest.PSObject.Properties['summary']
+    if ($null -ne $summaryProperty) { $summaryValue = $summaryProperty.Value }
+    $notesValue = $null
+    $notesProperty = $manifest.PSObject.Properties['notes']
+    if ($null -ne $notesProperty) { $notesValue = $notesProperty.Value }
+    foreach ($problem in (Get-OpenVideoReleaseNotesErrors -Summary $summaryValue -Notes $notesValue)) { $errors.Add($problem) }
 }
 if ($ExpectedCommit -and $commit -cne $ExpectedCommit) { $errors.Add('commit does not match the release source') }
 if ($ExpectedVersion -and $version -cne $ExpectedVersion) { $errors.Add('version does not match the release source') }

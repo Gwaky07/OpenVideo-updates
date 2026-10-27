@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { spawnSync } from 'node:child_process'
-import { createHash } from 'node:crypto'
+import { createHash, randomUUID } from 'node:crypto'
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -17,7 +17,7 @@ const temp = mkdtempSync(join(work, 'case-'))
 const manifestPath = join(temp, 'latest-sidebar.json')
 const commit = 'a'.repeat(40)
 const version = 'v0.3.99'
-const valid = () => ({ schema_version: 1, scope: 'sidebar', commit, headCommit: commit, version, package: { url: `https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-${version}-windows.zip`, sha256: 'b'.repeat(64), bytes: 100 } })
+const valid = () => ({ schema_version: 1, scope: 'sidebar', commit, headCommit: commit, version, summary: '素材库播放修复', notes: ['修复素材库详情页视频卡在封面不播放的问题'], package: { url: `https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-${version}-windows.zip`, sha256: 'b'.repeat(64), bytes: 100 } })
 const check = (manifest, args = []) => {
   writeFileSync(manifestPath, JSON.stringify(manifest))
   return spawnSync(shell, ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', join(root, 'scripts', 'Assert-OpenVideoLatestJson.ps1'), '-LatestJsonPath', manifestPath, ...args], { encoding: 'utf8', env: childEnv })
@@ -74,7 +74,75 @@ test('既有清单原样兼容，新清单必须严格递增', () => {
   changed.version = 'v0.3.98'; changed.package.url = changed.package.url.replaceAll(version, changed.version)
   assert.notEqual(check(changed, ['-BaselineLatestJsonPath', baseline]).status, 0)
   changed.version = 'v0.3.100'; changed.package.url = valid().package.url.replaceAll(version, changed.version)
+  // 合法递增的候选同样需要合规说明；这里恢复中文摘要，只验证版本递增本身。
+  changed.summary = valid().summary
   assert.equal(check(changed, ['-BaselineLatestJsonPath', baseline]).status, 0)
+  // REL-055：相对基线递增的新候选必须带合格的中文说明。
+  const noNotes = structuredClone(changed); delete noNotes.notes
+  const rejected = check(noNotes, ['-BaselineLatestJsonPath', baseline])
+  assert.notEqual(rejected.status, 0)
+  assert.match(rejected.stderr, /notes/)
+})
+// REL-055：v0.3.54 发出英文默认说明，v0.3.55 把三条说明拼成了一条带引号的字符串。
+// 新候选（带期望版本或相对基线变化）必须是 1–8 条、每条 ≤96 字的独立中文说明。
+for (const [name, change] of [
+  ['缺少说明', m => { delete m.notes }],
+  ['说明不是数组', m => { m.notes = '修复素材库详情页视频卡在封面不播放的问题' }],
+  ['说明为空数组', m => { m.notes = [] }],
+  ['三条说明拼成一条带引号的字符串', m => { m.notes = ["'修复素材库详情页视频卡在封面不播放的问题','保留封面等待态并在媒体资源可用后恢复播放'"] }],
+  ['英文默认说明', m => { m.notes = ['Replaces the OpenVideo product code (page + Gateway bundle + launcher + config); runtime is preserved'] }],
+  ['说明超过 96 字', m => { m.notes = ['修'.repeat(97)] }],
+  ['说明超过 8 条', m => { m.notes = Array.from({ length: 9 }, (_, i) => `修复第${i + 1}个问题`) }],
+  ['说明包含网址', m => { m.notes = ['详情见 https://example.com 的修复说明'] }],
+  ['说明重复', m => { m.notes = ['修复播放问题', '修复播放问题'] }],
+  ['说明不是字符串', m => { m.notes = [{ title: '修复播放问题' }] }],
+  ['缺少摘要', m => { delete m.summary }],
+  ['英文默认摘要', m => { m.summary = 'Sidebar product code update v0.3.99 (no runtime)' }],
+  ['摘要超过 80 字', m => { m.summary = '修'.repeat(81) }],
+]) {
+  test(`新候选拒绝${name}`, () => {
+    const m = valid(); change(m)
+    const result = check(m, ['-ExpectedVersion', version])
+    assert.notEqual(result.status, 0)
+    assert.match(result.stderr, /OPENVIDEO_LATEST_JSON_SCHEMA_INVALID/)
+  })
+}
+test('新候选接受单条和多条中文说明', () => {
+  const single = valid()
+  let result = check(single, ['-ExpectedVersion', version])
+  assert.equal(result.status, 0, result.stderr)
+  const multiple = valid(); multiple.notes = ['修复素材库详情页视频卡在封面不播放的问题', '已修复：分析等待后恢复播放', '改进：剪映导出遇到暂时性存储错误时自动重试']
+  result = check(multiple, ['-ExpectedVersion', version])
+  assert.equal(result.status, 0, result.stderr)
+})
+test('已发布清单在没有期望版本和基线时保持兼容，即使说明不合格', () => {
+  // 线上 v0.3.54/v0.3.55 的说明不合格，但发布前对现有清单的结构检查不能因此卡死下一次发布。
+  const legacyEnglish = valid(); legacyEnglish.summary = 'Sidebar product code update v0.3.54'; legacyEnglish.notes = ['Replaces the OpenVideo product code']
+  assert.equal(check(legacyEnglish).status, 0)
+  const legacyJoined = valid(); legacyJoined.notes = ["'修复素材库详情页','保留封面等待态'"]
+  assert.equal(check(legacyJoined).status, 0)
+})
+const readNotes = (content, expectedVersion = version) => {
+  const notesPath = join(temp, `${randomUUID()}.json`)
+  if (content !== null) writeFileSync(notesPath, typeof content === 'string' ? content : JSON.stringify(content))
+  const helper = join(root, 'scripts', 'OpenVideoReleaseNotes.ps1').replaceAll("'", "''")
+  const target = notesPath.replaceAll("'", "''")
+  return spawnSync(shell, ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-Command', `$ErrorActionPreference='Stop'; . '${helper}'; $r = Read-OpenVideoReleaseNotesFile -Path '${target}' -Version '${expectedVersion}'; [Console]::OutputEncoding=[Text.UTF8Encoding]::new($false); Write-Output ('NOTES_COUNT=' + @($r.Notes).Count); Write-Output ('NOTES_JSON=' + (ConvertTo-Json -InputObject $r.Notes -Compress))`], { encoding: 'utf8', env: childEnv })
+}
+test('版本说明文件：缺失、版本不符和格式错误都拒绝', () => {
+  assert.match(readNotes(null).stderr, /OPENVIDEO_RELEASE_NOTES_MISSING/)
+  assert.match(readNotes('{not json').stderr, /OPENVIDEO_RELEASE_NOTES_INVALID/)
+  assert.match(readNotes({ version: 'v0.3.1', summary: '播放修复', notes: ['修复播放问题'] }).stderr, /OPENVIDEO_RELEASE_NOTES_INVALID/)
+  assert.match(readNotes({ version, summary: '播放修复', notes: "'修复A','修复B'" }).stderr, /OPENVIDEO_RELEASE_NOTES_INVALID/)
+})
+test('版本说明文件：单条说明读取后仍是数组，带 BOM 也能读取', () => {
+  let result = readNotes({ version, summary: '播放修复', notes: ['修复素材库详情页视频卡在封面不播放的问题'] })
+  assert.equal(result.status, 0, result.stderr)
+  assert.match(result.stdout, /NOTES_COUNT=1/)
+  assert.match(result.stdout, /NOTES_JSON=\["修复素材库详情页视频卡在封面不播放的问题"\]/)
+  result = readNotes(`﻿${JSON.stringify({ version, summary: '播放修复', notes: ['修复播放问题', '改进加载提示'] })}`)
+  assert.equal(result.status, 0, result.stderr)
+  assert.match(result.stdout, /NOTES_COUNT=2/)
 })
 test('地址恢复仅允许改变 URL，禁止同时更换包或元数据', () => {
   const baseline = join(temp, 'address-baseline.json')
@@ -127,4 +195,45 @@ test('检查 ZIP 的真实身份、配置版本、摘要和字节数', () => {
   mkdirSync(join(stage, 'runtime'))
   writeFileSync(join(stage, 'runtime', 'forbidden.txt'), 'runtime')
   assert.match(check(pack(), ['-PackagePath', zip]).stderr, /FORBIDDEN_CONTENT/)
+})
+// REL-055：合并后确认 raw/main 上的清单就是刚发布的那份（容忍 raw CDN 的短暂缓存）。
+test('线上清单核对：一致则通过，持续旧内容则失败', async () => {
+  const { compareLiveManifest } = await import('./Test-OpenVideoLiveManifest.mjs')
+  const published = valid()
+  assert.deepEqual(compareLiveManifest(published, structuredClone(published)), [])
+  const stale = valid(); stale.version = 'v0.3.98'; stale.commit = stale.headCommit = 'c'.repeat(40)
+  const problems = compareLiveManifest(published, stale)
+  assert.ok(problems.some(p => p.includes('version')))
+  assert.ok(problems.some(p => p.includes('commit')))
+  const otherBytes = valid(); otherBytes.package.bytes = 101
+  assert.ok(compareLiveManifest(published, otherBytes).some(p => p.includes('package.bytes')))
+  const otherNotes = valid(); otherNotes.notes = ['另一条说明']
+  assert.ok(compareLiveManifest(published, otherNotes).some(p => p.includes('notes')))
+})
+test('线上清单核对：缓存未刷新时重试直到一致', async () => {
+  const { verifyLiveManifest } = await import('./Test-OpenVideoLiveManifest.mjs')
+  const published = valid()
+  const stale = { ...valid(), version: 'v0.3.98' }
+  const served = [stale, stale, published]
+  let calls = 0
+  const result = await verifyLiveManifest(published, { fetchManifest: async () => served[Math.min(calls++, served.length - 1)], attempts: 5, delayMs: 0 })
+  assert.equal(result.attempts, 3)
+  await assert.rejects(
+    verifyLiveManifest(published, { fetchManifest: async () => stale, attempts: 3, delayMs: 0 }),
+    /OPENVIDEO_LIVE_MANIFEST_MISMATCH/,
+  )
+})
+test('版本说明文件：顶层不是对象时给出明确报错', () => {
+  for (const content of ['null', '[]', '"说明"']) {
+    const result = readNotes(content)
+    assert.notEqual(result.status, 0)
+    assert.match(result.stderr, /OPENVIDEO_RELEASE_NOTES_INVALID[\s\S]*JSON object/)
+  }
+})
+test('客户端会丢弃的说明在发布前拒绝，并指出命中的内容', () => {
+  // 客户端的 UNSAFE_NOTE 包含 sk-；“Task-Center” 这类写法在客户端会被丢弃，发布端必须提前拦截。
+  const m = valid(); m.notes = ['修复 Task-Center 打不开的问题']
+  const result = check(m, ['-ExpectedVersion', version])
+  assert.notEqual(result.status, 0)
+  assert.match(result.stderr, /sk-/)
 })
