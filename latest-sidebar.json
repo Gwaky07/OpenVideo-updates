@@ -1,17 +1,18 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "5b6127ee7b553c0d7d6ec09187461c296292cee6",
-    "headCommit":  "5b6127ee7b553c0d7d6ec09187461c296292cee6",
-    "version":  "v0.3.55",
-    "summary":  "素材库播放与分析等待修复 v0.3.55",
+    "commit":  "29f0957abd3c58ee70d2c98f1955af450b42d047",
+    "headCommit":  "29f0957abd3c58ee70d2c98f1955af450b42d047",
+    "version":  "v0.3.56",
+    "summary":  "导出等待与更新恢复修复",
     "notes":  [
-                  "\u0027修复素材库详情页视频卡在封面不播放的问题\u0027,\u0027保留封面等待态并在媒体资源可用后恢复播放\u0027,\u0027修复分析等待、媒体预览和项目工作台的恢复路径\u0027"
+                  "素材导出复核授权时不再重复审计分析器依赖，减少任务查询等待",
+                  "更新恢复副本不再启动隐藏 PowerShell，改由下次正常启动清理"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.55-windows.zip",
-                    "sha256":  "23916b9288c08cb3292b997a9ce06e7e746d4ec4442bcc9e0003392e7af3821d",
-                    "bytes":  65019615
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.56-windows.zip",
+                    "sha256":  "a0577118912a9cfb8452c239a700bbb8d79a32cb981d09753ce8e0af74a1f039",
+                    "bytes":  65033665
                 },
-    "publishedAt":  "2026-10-26T09:20:15.4832886+00:00"
+    "publishedAt":  "2026-10-28T15:58:26.3807126+00:00"
 }
