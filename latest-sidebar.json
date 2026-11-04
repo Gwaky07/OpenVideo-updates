@@ -1,19 +1,20 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "e2e10e9e00c79abaa163f79eca181cbdbbe9136a",
-    "headCommit":  "e2e10e9e00c79abaa163f79eca181cbdbbe9136a",
-    "version":  "v0.3.57",
-    "summary":  "稳定性与剪映包装自动适配",
+    "commit":  "53ea3ffd0b1a33fb6362b92da25b8cb5aa28d8eb",
+    "headCommit":  "53ea3ffd0b1a33fb6362b92da25b8cb5aa28d8eb",
+    "version":  "v0.3.58",
+    "summary":  "修复中文路径下首次启动失败",
     "notes":  [
+                  "安装包放在中文文件夹或中文用户名目录下时，首次启动不再报“配置损坏”",
                   "剪映升级后自动重新检查本机包装资源，符合校验的花字、贴纸和视频特效可用于无模板导出",
                   "学到的包装资源在授权有效时保留，不再要求来源草稿一直存在",
                   "辅助程序提前退出不再拖垮工作台；未知异常会记录脱敏信息并触发安全重启"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.57-windows.zip",
-                    "sha256":  "456f70bb2edd436b7d3fedee25907c03ea5fa2d00da63b8b99d4531be1d6bf1a",
-                    "bytes":  65133180
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.58-windows.zip",
+                    "sha256":  "d3e84c8ce1c78abf104c70fe993726bfe0d3c1f76dce13a935496d1342bcb67a",
+                    "bytes":  65133271
                 },
-    "publishedAt":  "2026-11-04T04:52:50.7191174+00:00"
+    "publishedAt":  "2026-11-04T13:51:50.2298588+00:00"
 }
