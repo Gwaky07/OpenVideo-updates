@@ -1,18 +1,19 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "29f0957abd3c58ee70d2c98f1955af450b42d047",
-    "headCommit":  "29f0957abd3c58ee70d2c98f1955af450b42d047",
-    "version":  "v0.3.56",
-    "summary":  "导出等待与更新恢复修复",
+    "commit":  "e2e10e9e00c79abaa163f79eca181cbdbbe9136a",
+    "headCommit":  "e2e10e9e00c79abaa163f79eca181cbdbbe9136a",
+    "version":  "v0.3.57",
+    "summary":  "稳定性与剪映包装自动适配",
     "notes":  [
-                  "素材导出复核授权时不再重复审计分析器依赖，减少任务查询等待",
-                  "更新恢复副本不再启动隐藏 PowerShell，改由下次正常启动清理"
+                  "剪映升级后自动重新检查本机包装资源，符合校验的花字、贴纸和视频特效可用于无模板导出",
+                  "学到的包装资源在授权有效时保留，不再要求来源草稿一直存在",
+                  "辅助程序提前退出不再拖垮工作台；未知异常会记录脱敏信息并触发安全重启"
               ],
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.56-windows.zip",
-                    "sha256":  "a0577118912a9cfb8452c239a700bbb8d79a32cb981d09753ce8e0af74a1f039",
-                    "bytes":  65033665
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.57-windows.zip",
+                    "sha256":  "456f70bb2edd436b7d3fedee25907c03ea5fa2d00da63b8b99d4531be1d6bf1a",
+                    "bytes":  65133180
                 },
-    "publishedAt":  "2026-10-28T15:58:26.3807126+00:00"
+    "publishedAt":  "2026-11-04T04:52:50.7191174+00:00"
 }
