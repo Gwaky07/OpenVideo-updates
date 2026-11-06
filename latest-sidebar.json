@@ -1,20 +1,22 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "53ea3ffd0b1a33fb6362b92da25b8cb5aa28d8eb",
-    "headCommit":  "53ea3ffd0b1a33fb6362b92da25b8cb5aa28d8eb",
-    "version":  "v0.3.58",
-    "summary":  "修复中文路径下首次启动失败",
+    "commit":  "a16376e30d34f091086ec0ea26df77d26bb6e6fc",
+    "headCommit":  "a16376e30d34f091086ec0ea26df77d26bb6e6fc",
+    "version":  "v0.3.59",
+    "summary":  "更新包缩小到约 2 MB，并防止同一任务反复拖垮工作台",
     "notes":  [
-                  "安装包放在中文文件夹或中文用户名目录下时，首次启动不再报“配置损坏”",
-                  "剪映升级后自动重新检查本机包装资源，符合校验的花字、贴纸和视频特效可用于无模板导出",
-                  "学到的包装资源在授权有效时保留，不再要求来源草稿一直存在",
-                  "辅助程序提前退出不再拖垮工作台；未知异常会记录脱敏信息并触发安全重启"
+                  "侧栏更新包从约 62 MB 缩小到约 2 MB，下载和安装更快；本机已有的运行组件原样保留",
+                  "某个任务反复导致工作台崩溃时，自动恢复最多 3 次后停止并标记失败，不再无限重启；手动重试可再次运行",
+                  "整理工作台内部任务处理结构，方便后续更新保持稳定"
               ],
+    "runtime_action":  "preserve",
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.58-windows.zip",
-                    "sha256":  "d3e84c8ce1c78abf104c70fe993726bfe0d3c1f76dce13a935496d1342bcb67a",
-                    "bytes":  65133271
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.59-windows.zip",
+                    "sha256":  "aec2981d1c626a557737985004860c127139d1188453b1a1162a6d68a09cbe5f",
+                    "bytes":  2290744
                 },
-    "publishedAt":  "2026-11-04T13:51:50.2298588+00:00"
+    "publishedAt":  "2026-11-06T09:43:18.6854686+00:00",
+    "runtime_fingerprint":  "82536528594e410b2dcde5628c2779223f9bcf7b55b207a6454a13c56016cb30",
+    "runtime_fingerprint_scheme":  "gateway-native-receipt-v1"
 }
