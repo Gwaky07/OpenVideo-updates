@@ -1,22 +1,23 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "64499ba598851e88d73c47e57b4661f4bee79c10",
-    "headCommit":  "64499ba598851e88d73c47e57b4661f4bee79c10",
-    "version":  "v0.3.60",
-    "summary":  "同事电脑也能自动识别剪映包装资源",
+    "commit":  "935ec54675743b96acdbf550219e6ed2a01684cc",
+    "headCommit":  "935ec54675743b96acdbf550219e6ed2a01684cc",
+    "version":  "v0.3.61",
+    "summary":  "剪映 11.7 草稿恢复模板学习，写入器显示真实原因",
     "notes":  [
-                  "首次启动后自动下载并导入剪映包装资源目录（花字、贴纸、视频特效），无需手动安装",
-                  "剪映草稿或缓存位置改到其他盘时，也能正确识别剪映，并导出到剪映实际使用的草稿目录",
-                  "放宽剪映检测时间，电脑较慢或杀毒软件扫描时不再误判为未安装剪映"
+                  "剪映升级到 11.7 后，上传草稿又能正常学习模板（自动借用本机保留的旧版剪映组件解密）",
+                  "修复同事电脑上传剪映草稿时一律提示“模板学习失败”的问题",
+                  "剪映草稿写入器不可用时显示真实原因和处理办法，不再一律提示“准备中”",
+                  "电脑较慢时剪映写入器也能在启动时准备好，不再被包装自检拖到超时"
               ],
     "runtime_action":  "preserve",
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.60-windows.zip",
-                    "sha256":  "1b995189d3a3ab0bb7e4295cbe1e9e8cb8d92392eae151a9ebde4590b8dafa06",
-                    "bytes":  2294246
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.61-windows.zip",
+                    "sha256":  "9c4ec4358a212850b37017102ed2b64cfa09c0a4f2152b8f257bf9549cf2fa12",
+                    "bytes":  2433542
                 },
-    "publishedAt":  "2026-11-07T02:21:41.0093445+00:00",
+    "publishedAt":  "2026-11-09T11:03:17.2647037+00:00",
     "runtime_fingerprint":  "82536528594e410b2dcde5628c2779223f9bcf7b55b207a6454a13c56016cb30",
     "runtime_fingerprint_scheme":  "gateway-native-receipt-v1"
 }
