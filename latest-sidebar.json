@@ -1,23 +1,27 @@
 {
     "schema_version":  1,
     "scope":  "sidebar",
-    "commit":  "935ec54675743b96acdbf550219e6ed2a01684cc",
-    "headCommit":  "935ec54675743b96acdbf550219e6ed2a01684cc",
-    "version":  "v0.3.61",
-    "summary":  "剪映 11.7 草稿恢复模板学习，写入器显示真实原因",
+    "commit":  "f0400ecae7d4271b3cf330d918f4e5f0cfd67980",
+    "headCommit":  "f0400ecae7d4271b3cf330d918f4e5f0cfd67980",
+    "version":  "v0.3.62",
+    "summary":  "修复预览反复失败、成片页卡在等待初剪，横屏项目可导出竖屏模板花字",
     "notes":  [
-                  "剪映升级到 11.7 后，上传草稿又能正常学习模板（自动借用本机保留的旧版剪映组件解密）",
-                  "修复同事电脑上传剪映草稿时一律提示“模板学习失败”的问题",
-                  "剪映草稿写入器不可用时显示真实原因和处理办法，不再一律提示“准备中”",
-                  "电脑较慢时剪映写入器也能在启动时准备好，不再被包装自检拖到超时"
+                  "同一台电脑只允许一个工作台使用同一份数据，修复新旧版本互抢任务导致预览反复失败、需重启才好的问题",
+                  "重新生成分镜后又改了选镜时，AI 剪辑完成后成片页不再一直卡在“等待 AI 初剪”",
+                  "从成片页返回 AI 剪辑步骤时不再整页空白",
+                  "横屏项目使用竖屏模板时，剪映导出会把模板花字和贴纸等比缩放进横屏画面，不再导出失败",
+                  "支持上传本地整段配音，预览和剪映使用同一段音频，不再被分段切断",
+                  "分镜支持逐句编辑画面描述后重新匹配，并可按素材名称检索镜头",
+                  "镜头按配音时长对齐，素材不够长时自动定格或加速补齐",
+                  "模板花字保留原稿位置并按项目字幕安全区适配"
               ],
     "runtime_action":  "preserve",
     "package":  {
-                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.61-windows.zip",
-                    "sha256":  "9c4ec4358a212850b37017102ed2b64cfa09c0a4f2152b8f257bf9549cf2fa12",
-                    "bytes":  2433542
+                    "url":  "https://raw.githubusercontent.com/Gwaky07/OpenVideo-updates/main/OpenVideo-sidebar-v0.3.62-windows.zip",
+                    "sha256":  "a526b9bd9f562f427a239add8c2ecb21fe870d48fe6ccf17f1731a2c0ebc58cd",
+                    "bytes":  2473528
                 },
-    "publishedAt":  "2026-11-09T11:03:17.2647037+00:00",
+    "publishedAt":  "2026-11-23T09:03:15.2717626+00:00",
     "runtime_fingerprint":  "82536528594e410b2dcde5628c2779223f9bcf7b55b207a6454a13c56016cb30",
     "runtime_fingerprint_scheme":  "gateway-native-receipt-v1"
 }
